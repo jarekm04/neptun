@@ -1,0 +1,23 @@
+@use 'sass:color';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  //font-family: "Roboto Light";
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 1320px;
+}
