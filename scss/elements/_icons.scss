@@ -1,0 +1,15 @@
+.material-icons.hamburger {
+  display: none;
+  @include mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: $color-white;
+    cursor: pointer;
+    transition: .2s ease-in;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}

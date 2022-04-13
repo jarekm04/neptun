@@ -1,0 +1,9 @@
+.homePage {
+  padding-top: 10rem;
+  .homePage__video {
+    width: 100%;
+    height: auto;
+    opacity: 0.5;
+    filter: blur(3px);
+  }
+}

@@ -2,9 +2,7 @@
 @import './config/mixins';
 @import './config/base';
 
-@import './layout/header';
+@import "./elements/icons";
 
-body {
-  height: 200vh;
-  background: peru;
-}
+@import './layout/header';
+@import './layout/homePage';
