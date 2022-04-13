@@ -3,3 +3,8 @@
 @import './config/base';
 
 @import './layout/header';
+
+body {
+  height: 200vh;
+  background: peru;
+}
