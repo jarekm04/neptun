@@ -16,11 +16,13 @@
       font-size: 5.6rem;
       margin-bottom: 4rem;
       letter-spacing: 0.2rem;
+      text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
     }
     .textBox__desc {
       font-size: 1.8rem;
       margin-bottom: 3rem;
       letter-spacing: 0.1rem;
+      text-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
     }
     .textBox__btn {
       display: inline-flex;
@@ -35,6 +37,10 @@
       color: $color-white;
       letter-spacing: 0.1rem;
       text-decoration: none;
+      transition: .2s ease-in-out;
+      &:hover {
+        filter: grayscale(1);
+      }
     }
   }
 }

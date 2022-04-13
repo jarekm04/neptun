@@ -166,11 +166,13 @@ body {
   font-size: 5.6rem;
   margin-bottom: 4rem;
   letter-spacing: 0.2rem;
+  text-shadow: 4px 4px 5px rgb(0, 0, 0);
 }
 .homePage .homepage__textBox .textBox__desc {
   font-size: 1.8rem;
   margin-bottom: 3rem;
   letter-spacing: 0.1rem;
+  text-shadow: 4px 4px 5px rgb(0, 0, 0);
 }
 .homePage .homepage__textBox .textBox__btn {
   display: inline-flex;
@@ -185,5 +187,9 @@ body {
   color: #fff;
   letter-spacing: 0.1rem;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+.homePage .homepage__textBox .textBox__btn:hover {
+  filter: grayscale(1);
 }
 /*# sourceMappingURL=main.css.map */
