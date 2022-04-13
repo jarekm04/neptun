@@ -1,9 +1,40 @@
 .homePage {
+  position: relative;
   padding-top: 10rem;
   .homePage__video {
     width: 100%;
     height: auto;
     opacity: 0.5;
     filter: blur(3px);
+  }
+  .homepage__textBox {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    max-width: 50%;
+    .textBox__title {
+      font-size: 5.6rem;
+      margin-bottom: 4rem;
+      letter-spacing: 0.2rem;
+    }
+    .textBox__desc {
+      font-size: 1.8rem;
+      margin-bottom: 3rem;
+      letter-spacing: 0.1rem;
+    }
+    .textBox__btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      height: 6rem;
+      font-size: 1.8rem;
+      font-weight: bold;
+      line-height: 2.1rem;
+      padding: 0 3rem;
+      background-color: $color-buttonBg;
+      color: $color-white;
+      letter-spacing: 0.1rem;
+      text-decoration: none;
+    }
   }
 }
