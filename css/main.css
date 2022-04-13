@@ -149,12 +149,26 @@ body {
 .homePage {
   position: relative;
   padding-top: 10rem;
+  overflow: hidden;
 }
 .homePage .homePage__video {
-  width: 100%;
-  height: auto;
   opacity: 0.5;
   filter: blur(3px);
+  margin: 0 auto;
+}
+@media (min-aspect-ratio: 16/9) {
+  .homePage .homePage__video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  .homePage .homePage__video {
+    width: auto;
+    height: 100%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }
 .homePage .homepage__textBox {
   position: absolute;
