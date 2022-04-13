@@ -4,12 +4,12 @@
   left: 0;
   width: 100%;
   height: 10rem;
-  background-color: #000;
+  background-color: $color-black;
   opacity: 0.9;
   .header-box {
     display: flex;
     justify-content: space-between;
-    padding: 0 1rem;
+    padding: 0 2rem;
     .header__logo {
       img {
         height: 10rem;
@@ -18,6 +18,15 @@
     .header__menu {
       display: flex;
       font-size: 1.6rem;
+      @include mobile {
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background-color: $color-black;
+      }
       li {
         list-style-type: none;
         a {
@@ -30,6 +39,12 @@
           color: $color-white;
           text-decoration: none;
           letter-spacing: 0.3rem;
+          @include mobile {
+            width: 100%;
+            height: 5rem;
+            margin: 0;
+            background: mediumpurple;
+          }
           &:after,
           &:before {
             content: "";
@@ -59,6 +74,21 @@
             top: 25%;
             background: $color-white;
           }
+        }
+      }
+    }
+    .material-icons.hamburger {
+      display: none;
+      @include mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        color: $color-white;
+        cursor: pointer;
+        transition: .2s ease-in;
+        &:hover {
+          transform: scale(1.3);
         }
       }
     }

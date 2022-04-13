@@ -1,0 +1,7 @@
+@use 'sass:math';
+
+@mixin mobile {
+  @media screen and (max-width: #{$breakpoint-desktop}) {
+    @content;
+  }
+}
