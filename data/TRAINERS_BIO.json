@@ -1,23 +1,23 @@
 {
   "trainersBIO": [
     {
-      "id": 1,
+      "id": 0,
       "text": "V dan - trener II klasy Taekwondo ITF oraz instruktor KAPAP. Trenuje nieprzerwanie od końca lat 90-tych zdobywając przez ten czas doświadczenie zawodnicze oraz instruktorskie. Trenował również inne sporty i systemy walk. Ostatecznie w roku 2010 zakłada KSW NEPTUN Gdańsk. Jest medalistą turniejów międzynarodowych oraz ogólnopolskich różnej rangi, w tym m.in. Mistrzostw Polski. Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej.",
     },
     {
-      "id": 2,
+      "id": 1,
       "text": "III dan - trener II klasy Taekwondo ITF. Trenuje z przerwami od 1991 r. Uprawnienia instruktorskie zdobył w 2006 r. Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej."
     },
     {
-      "id": 3,
+      "id": 2,
       "text": "I dan – instruktor Taekwondo ITF oraz sędzia sportowy. Aktywnie trenuje od roku 2005.Instruktor grupy dziecięcej."
     },
     {
-      "id": 4,
+      "id": 3,
       "text": "I dan - instruktor TAEKWON-DO ITF. Trenuje od 1996 r. Dzieli się swoim wieloletnim doświadczeniem wspomagając trenerów w trakcie  prowadzonych zajęć."
     },
     {
-      "id": 5,
+      "id": 4,
       "text": "1 cup –asystentka instruktora grupy dziecięcej. Czynna zawodniczka i kilkukrotna medalistka Mistrzostw Polski w Taekwondo w walkach."
     }
   ]
