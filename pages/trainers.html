@@ -42,31 +42,38 @@
 
 <main class="trainers">
     <div class="trainers__trainer">
-        <img src="../assets/1andrzej.png" alt="andrzej">
-        <h2 class="trainer__title">Andrzej Dzwoniarski</h2>
-        <p class="trainer__bio">III dan</p>
-    </div>
-    <div class="trainers__trainer">
-        <img src="../assets/2blazej.png" alt="blazej">
-        <h2 class="trainer__title">Błażej Czaja</h2>
-        <p class="trainer__bio">I dan</p>
-    </div>
-    <div class="trainers__trainer">
-        <img src="../assets/3karol.png" alt="karol">
-        <h2 class="trainer__title">Karol Czemko</h2>
-        <p class="trainer__bio">I dan</p>
-    </div>
-    <div class="trainers__trainer">
-        <img src="../assets/4kuba.png" alt="kuba">
+        <img class="trainer__photo" src="../assets/4kuba.png" alt="kuba">
         <h2 class="trainer__title">Jakub Tryzno</h2>
-        <p class="trainer__bio">V dan</p>
+        <p class="trainer__subtitle">V dan</p>
     </div>
     <div class="trainers__trainer">
-        <img src="../assets/3karol.png" alt="lorem">
+        <img class="trainer__photo" src="../assets/1andrzej.png" alt="andrzej">
+        <h2 class="trainer__title">Andrzej Dzwoniarski</h2>
+        <p class="trainer__subtitle">III dan</p>
+    </div>
+    <div class="trainers__trainer">
+        <img class="trainer__photo" src="../assets/3karol.png" alt="karol">
+        <h2 class="trainer__title">Karol Czemko</h2>
+        <p class="trainer__subtitle">I dan</p>
+    </div>
+    <div class="trainers__trainer">
+        <img class="trainer__photo" src="../assets/2blazej.png" alt="blazej">
+        <h2 class="trainer__title">Błażej Czaja</h2>
+        <p class="trainer__subtitle">I dan</p>
+    </div>
+    <div class="trainers__trainer">
+        <img class="trainer__photo" src="../assets/3karol.png" alt="lorem">
         <h2 class="trainer__title">Wiktoria Kokot</h2>
-        <p class="trainer__bio">1 cup</p>
+        <p class="trainer__subtitle">1 cup</p>
     </div>
 </main>
+<div class="popup hidden">
+    <span class="material-icons popup__close">close</span>
+    <img class="popup__img" src="" alt="">
+    <p class="trainer__bio">III dan - trener II klasy Taekwondo ITF. Trenuje z przerwami od 1991 r. Uprawnienia instruktorskie zdobył w 2006 r. Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej.</p>
+    <span aria-label="Poprzednie zdjęcie" class="material-icons popup__arrow popup__arrow--left">chevron_left</span>
+    <span aria-label="Następne zdjęcie" class="material-icons popup__arrow popup__arrow--right">navigate_next</span>
+</div>
 
 <script src="../js/app.js"></script>
 </body>
