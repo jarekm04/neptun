@@ -213,14 +213,63 @@ body {
 }
 
 .trainers {
-  margin-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 3rem;
+  margin-top: 15rem;
+  padding: 0 8rem;
+}
+@media (max-width: 500px) {
+  .trainers {
+    padding: 0 1rem;
+  }
+}
+.trainers .trainers__trainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 2rem;
+  border-right-color: #2d2d2d;
+  border-right-style: solid;
+  border-right-width: 0.3rem;
+}
+@media (max-width: 847px) {
+  .trainers .trainers__trainer {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .trainers .trainers__trainer {
+    padding: 0 1rem;
+  }
+}
+.trainers .trainers__trainer img {
+  width: 300px;
+  height: 300px;
+  filter: grayscale(1);
+  margin-bottom: 1.4rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+.trainers .trainers__trainer img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+}
+.trainers .trainers__trainer .trainer__title {
+  font-size: 2.5rem;
+  margin-bottom: 1.4rem;
+}
+.trainers .trainers__trainer .trainer__bio {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 .theory {
   margin-top: 120px;
 }
 
-.aboutUs {
+.schedule {
   margin-top: 120px;
 }
 
