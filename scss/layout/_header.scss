@@ -10,11 +10,14 @@
   .header-box {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    height: 10rem;
     padding: 0 2rem;
     .header__logo {
-      img {
-        height: 10rem;
-      }
+      font-size: 3.5rem;
+      font-weight: bold;
+      color: $color-white;
+      text-decoration: none;
     }
     .header__menu {
       display: flex;
@@ -41,8 +44,7 @@
           height: 10rem;
           min-width: 7rem;
           position: relative;
-          font-weight: bold;
-          margin: 0 3rem;
+          margin: 0 2.5rem;
           color: $color-white;
           text-decoration: none;
           letter-spacing: 0.3rem;
