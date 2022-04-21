@@ -1,9 +1,11 @@
 .trainers {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  justify-items: center;
   grid-gap: 4rem;
   margin-top: 5rem;
   padding: 0 2rem;
+  scroll-margin-top: $nav-offset-top;
   @media (max-width: 500px) {
     padding: 0 1rem;
   }
@@ -11,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 400px;
+    max-width: 40rem;
     position: relative;
     .trainer__photo {
       display: block;
