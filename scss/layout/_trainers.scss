@@ -3,8 +3,10 @@
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
   grid-gap: 4rem;
-  margin-top: 5rem;
-  padding: 0 2rem;
+  background-image: url("../assets/neptun-logo-cutted.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
   scroll-margin-top: $nav-offset-top;
   @media (max-width: 500px) {
     padding: 0 1rem;
@@ -18,6 +20,9 @@
     .trainer__photo {
       display: block;
       width: 100%;
+      filter: saturate(40%);
+      opacity: 0.98;
+      border-radius: 2rem;
     }
     .trainer__overlay {
       position: absolute;

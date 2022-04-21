@@ -1,0 +1,64 @@
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: $color-lightGray;
+  color: $color-black;
+  padding: 2rem 3rem;
+  .schedule__photo {
+    width: 40%;
+    max-width: 59rem;
+    min-width: 45rem;
+    height: 60rem;
+    background-image: url("../../assets/box-cutted.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: translateY(-20%);
+  }
+  .schedule__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 50%;
+    padding: 0 2rem;
+    margin-top: 10rem;
+    .content__title {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+    }
+    .content__address {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .content__columns {
+      display: flex;
+      .column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 20rem;
+        padding: 0 1.5rem;
+        .column__title {
+          font-size: 2.5rem;
+          font-weight: bold;
+          text-align: center;
+          margin-bottom: 0.7rem;
+        }
+        .column__subtitle {
+          font-size: 1.6rem;
+          margin-bottom: 2.2rem;
+        }
+        .column__img {
+          margin-bottom: 1rem;
+          width: 6.4rem;
+          height: 6.4rem;
+        }
+        .column__time {
+          font-size: 2rem;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

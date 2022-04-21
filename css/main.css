@@ -286,8 +286,10 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
   grid-gap: 4rem;
-  margin-top: 5rem;
-  padding: 0 2rem;
+  background-image: url("../assets/neptun-logo-cutted.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 5rem 2rem;
   scroll-margin-top: 100px;
 }
 @media (max-width: 500px) {
@@ -305,6 +307,9 @@ body {
 .trainers .trainers__trainer .trainer__photo {
   display: block;
   width: 100%;
+  filter: saturate(40%);
+  opacity: 0.98;
+  border-radius: 2rem;
 }
 .trainers .trainers__trainer .trainer__overlay {
   position: absolute;
@@ -341,5 +346,84 @@ body {
 .trainers .trainer__overlay--blur {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
+}
+
+.theory {
+  height: 600px;
+  font-size: 5rem;
+  background-color: #2d2d2d;
+  color: #000;
+}
+
+.schedule {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #e3e3e3;
+  color: #000;
+  padding: 2rem 3rem;
+}
+.schedule .schedule__photo {
+  width: 40%;
+  max-width: 59rem;
+  min-width: 45rem;
+  height: 60rem;
+  background-image: url("../../assets/box-cutted.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: translateY(-20%);
+}
+.schedule .schedule__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: 50%;
+  padding: 0 2rem;
+  margin-top: 10rem;
+}
+.schedule .schedule__content .content__title {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+.schedule .schedule__content .content__address {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.schedule .schedule__content .content__columns {
+  display: flex;
+}
+.schedule .schedule__content .content__columns .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 20rem;
+  padding: 0 1.5rem;
+}
+.schedule .schedule__content .content__columns .column .column__title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.7rem;
+}
+.schedule .schedule__content .content__columns .column .column__subtitle {
+  font-size: 1.6rem;
+  margin-bottom: 2.2rem;
+}
+.schedule .schedule__content .content__columns .column .column__img {
+  margin-bottom: 1rem;
+  width: 6.4rem;
+  height: 6.4rem;
+}
+.schedule .schedule__content .content__columns .column .column__time {
+  font-size: 2rem;
+  text-decoration: underline;
+}
+
+.contact {
+  height: 600px;
+  font-size: 5rem;
+  background-color: #000;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
