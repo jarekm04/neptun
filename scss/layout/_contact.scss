@@ -3,8 +3,18 @@
   justify-content: space-between;
   padding: 0 3rem;
   background: $color-mixedGray;
+  @include tablet {
+    flex-direction: column;
+    padding: 1rem 3rem;
+    align-items: center;
+  }
   .contact__details {
     margin-top: 11rem;
+    padding-right: 1rem;
+    @include tablet {
+      margin-top: 2rem;
+      padding-right: 0;
+    }
     .details__item {
       margin-bottom: 3rem;
       .item__icon {
@@ -13,6 +23,8 @@
       }
       .item__data {
         font-size: 2rem;
+        line-height: 2.5rem;
+        letter-spacing: 0.1rem;
         color: $color-white;
         text-decoration: none;
         transition: .2s ease-in-out;
@@ -24,9 +36,16 @@
   }
   .contact__map {
     transform: translateY(-10%);
+    @include tablet {
+      width: 100%;
+      transform: translateY(0);
+    }
     iframe {
-      width: 600px;
-      height: 450px;
+      width: 60rem;
+      height: 45rem;
+      @include tablet {
+        width: 100%;
+      }
     }
   }
 }

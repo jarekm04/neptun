@@ -1,7 +1,13 @@
 @use 'sass:math';
 
+@mixin tablet {
+  @media screen and (max-width: #{$breakpoint-tablet}) {
+    @content;
+  }
+}
+
 @mixin mobile {
-  @media screen and (max-width: #{$breakpoint-desktop}) {
+  @media screen and (max-width: #{$breakpoint-mobile}) {
     @content;
   }
 }

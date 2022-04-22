@@ -22,7 +22,7 @@
     .header__menu {
       display: flex;
       font-size: 1.6rem;
-      @include mobile {
+      @include tablet {
         position: absolute;
         top: 10rem;
         left: -100%;
@@ -48,7 +48,7 @@
           color: $color-white;
           text-decoration: none;
           letter-spacing: 0.3rem;
-          @include mobile {
+          @include tablet {
             justify-content: center;
             height: 5rem;
             margin: 0;
@@ -65,14 +65,14 @@
           &:after {
             bottom: 25%;
             left: 0;
-            @include mobile {
+            @include tablet {
               bottom: 10%;
             }
           }
           &:before {
             top: 25%;
             right: 0;
-            @include mobile {
+            @include tablet {
               top: 10%;
             }
           }
@@ -81,7 +81,7 @@
             height: 0.2rem;
             bottom: 25%;
             background: $color-white;
-            @include mobile {
+            @include tablet {
               bottom: 10%;
             }
           }
@@ -90,7 +90,7 @@
             height: 0.2rem;
             top: 25%;
             background: $color-white;
-            @include mobile {
+            @include tablet {
               top: 10%;
             }
           }
@@ -99,7 +99,7 @@
     }
     .material-icons.hamburger {
       display: none;
-      @include mobile {
+      @include tablet {
         display: flex;
         justify-content: center;
         align-items: center;
