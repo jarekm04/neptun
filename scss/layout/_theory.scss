@@ -1,7 +1,22 @@
 .theory {
   height: 600px;
-  font-size: 5rem;
   background-color: #2d2d2d;
-  color: #000;
+  color: $color-white;
   scroll-margin-top: $nav-offset-top;
+  .theory__item {
+    .item__title {
+      font-size: 3rem;
+    }
+    .item__img {
+      width: 60px;
+      height: 60px;
+      color: black;
+    }
+    .item__text {
+      font-size: 2rem;
+    }
+    .item__anchor {
+      @include buttonStyle;
+    }
+  }
 }

@@ -355,10 +355,38 @@ body {
 
 .theory {
   height: 600px;
-  font-size: 5rem;
   background-color: #2d2d2d;
-  color: #000;
+  color: #fff;
   scroll-margin-top: 100px;
+}
+.theory .theory__item .item__title {
+  font-size: 3rem;
+}
+.theory .theory__item .item__img {
+  width: 60px;
+  height: 60px;
+  color: black;
+}
+.theory .theory__item .item__text {
+  font-size: 2rem;
+}
+.theory .theory__item .item__anchor {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  padding: 0 3rem;
+  background-color: #2b5379;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  border-radius: 10rem;
+}
+.theory .theory__item .item__anchor:hover {
+  filter: grayscale(1);
 }
 
 .schedule {
