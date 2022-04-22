@@ -1,21 +1,27 @@
 .theory {
-  height: 600px;
+  height: 700px;
   background-color: #2d2d2d;
   color: $color-white;
   scroll-margin-top: $nav-offset-top;
   .theory__item {
-    width: 300px;
-    background: peru;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 320px;
+    height: 100%;
     .item__title {
-      font-size: 3rem;
+      font-size: 4rem;
+      text-align: center;
     }
     .item__img {
-      width: 60px;
-      height: 60px;
+      width: 90px;
+      height: 90px;
       color: black;
     }
     .item__text {
       font-size: 2rem;
+      text-align: center;
     }
     .item__anchor {
       @include buttonStyle;
@@ -32,6 +38,6 @@
 .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 300px;
+  width: 320px;
+  height: 400px;
 }

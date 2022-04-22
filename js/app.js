@@ -12,7 +12,7 @@ document.querySelectorAll(".menu__item").forEach( item => item.addEventListener(
 }))
 
 //swiper theory carousel
-var swiper = new Swiper(".mySwiper", {
+const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
@@ -26,5 +26,9 @@ var swiper = new Swiper(".mySwiper", {
     },
     pagination: {
         el: ".swiper-pagination",
+    },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
     },
 });
