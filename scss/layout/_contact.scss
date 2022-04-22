@@ -1,6 +1,32 @@
 .contact {
-  height: 600px;
-  font-size: 5rem;
-  background-color: $color-black;
-  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3rem;
+  background: $color-mixedGray;
+  .contact__details {
+    margin-top: 11rem;
+    .details__item {
+      margin-bottom: 3rem;
+      .item__icon {
+        font-size: 3rem;
+        margin-right: 1rem;
+      }
+      .item__data {
+        font-size: 2rem;
+        color: $color-white;
+        text-decoration: none;
+        transition: .2s ease-in-out;
+        &:hover {
+          color: $color-secondary;
+        }
+      }
+    }
+  }
+  .contact__map {
+    transform: translateY(-10%);
+    iframe {
+      width: 600px;
+      height: 450px;
+    }
+  }
 }

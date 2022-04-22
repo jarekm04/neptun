@@ -5,6 +5,7 @@
   background-color: $color-lightGray;
   color: $color-black;
   padding: 2rem 3rem;
+  scroll-margin-top: $nav-offset-top;
   .schedule__photo {
     width: 40%;
     max-width: 59rem;
@@ -51,8 +52,8 @@
         }
         .column__img {
           margin-bottom: 1rem;
-          width: 6.4rem;
-          height: 6.4rem;
+          width: 6rem;
+          height: 6rem;
         }
         .column__time {
           font-size: 2rem;
