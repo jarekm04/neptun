@@ -11,28 +11,20 @@ document.querySelectorAll(".menu__item").forEach( item => item.addEventListener(
     menuList.classList.contains("active") ? hamburgerIcon.textContent = "cancel" : hamburgerIcon.textContent = "menu";
 }))
 
-var contentWayPoint = function() {
-    var i = 0;
-    $('.animate-box').waypoint( function( direction ) {
-
-        if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-
-            i++;
-
-            $(this.element).addClass('item-animate');
-            setTimeout(function(){
-
-                $('body .animate-box.item-animate').each(function(k){
-                    var el = $(this);
-                    setTimeout( function () {
-                        el.addClass('fadeInUp animated');
-                        el.removeClass('item-animate');
-                    },  k * 200, 'easeInOutExpo' );
-                });
-
-            }, 100);
-
-        }
-
-    } , { offset: '85%' } );
-};
+//swiper theory carousel
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});

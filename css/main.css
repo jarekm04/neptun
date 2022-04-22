@@ -359,6 +359,10 @@ body {
   color: #fff;
   scroll-margin-top: 100px;
 }
+.theory .theory__item {
+  width: 300px;
+  background: peru;
+}
 .theory .theory__item .item__title {
   font-size: 3rem;
 }
@@ -387,6 +391,19 @@ body {
 }
 .theory .theory__item .item__anchor:hover {
   filter: grayscale(1);
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
 }
 
 .schedule {
