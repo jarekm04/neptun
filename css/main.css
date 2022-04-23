@@ -478,6 +478,8 @@ body {
   background-size: cover;
   background-position: center;
   transform: translateY(-20%);
+  -webkit-animation: photoPositionY 9s ease-in-out infinite alternate;
+          animation: photoPositionY 9s ease-in-out infinite alternate;
 }
 @media screen and (max-width: 1000px) {
   .schedule .schedule__photo {
@@ -576,6 +578,17 @@ body {
   text-decoration: underline;
 }
 
+@-webkit-keyframes photoPositionY {
+  100% {
+    background-position-y: 60%;
+  }
+}
+
+@keyframes photoPositionY {
+  100% {
+    background-position-y: 60%;
+  }
+}
 .contact {
   display: flex;
   justify-content: space-between;

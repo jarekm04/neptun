@@ -19,6 +19,7 @@
     background-size: cover;
     background-position: center;
     transform: translateY(-20%);
+    animation: photoPositionY 9s ease-in-out infinite alternate;
     @include tablet {
       width: 100%;
       height: 40rem;
@@ -99,5 +100,11 @@
         }
       }
     }
+  }
+}
+
+@keyframes photoPositionY {
+  100% {
+    background-position-y: 60%;
   }
 }

@@ -32,3 +32,6 @@ const swiper = new Swiper(".mySwiper", {
         disableOnInteraction: false
     },
 });
+
+//AOS fade in sections
+AOS.init();
