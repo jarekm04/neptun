@@ -302,11 +302,13 @@ body {
   padding-left: 0.5rem;
 }
 
-.trainers {
+.trainers .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   justify-items: center;
-  grid-gap: 4rem;
+  row-gap: 3rem;
+  -moz-column-gap: 5rem;
+       column-gap: 5rem;
   background-image: url("../assets/neptun-logo-cutted.jpg");
   background-size: cover;
   background-position: center;
@@ -315,11 +317,11 @@ body {
   scroll-margin-top: calc(100px - 0.1rem);
 }
 @media screen and (max-width: 600px) {
-  .trainers {
+  .trainers .container {
     grid-template-columns: unset;
   }
 }
-.trainers .trainers__trainer {
+.trainers .container .trainers__trainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -327,18 +329,18 @@ body {
   position: relative;
 }
 @media screen and (max-width: 600px) {
-  .trainers .trainers__trainer {
+  .trainers .container .trainers__trainer {
     max-width: 30rem;
   }
 }
-.trainers .trainers__trainer .trainer__photo {
+.trainers .container .trainers__trainer .trainer__photo {
   display: block;
   width: 100%;
   filter: saturate(40%);
   opacity: 0.98;
   border-radius: 2rem;
 }
-.trainers .trainers__trainer .trainer__overlay {
+.trainers .container .trainers__trainer .trainer__overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -352,35 +354,35 @@ body {
   opacity: 0;
   transition: opacity 0.3s;
 }
-.trainers .trainers__trainer .trainer__overlay:hover {
+.trainers .container .trainers__trainer .trainer__overlay:hover {
   opacity: 1;
 }
-.trainers .trainers__trainer .trainer__overlay:hover > * {
+.trainers .container .trainers__trainer .trainer__overlay:hover > * {
   transform: translateY(0);
 }
-.trainers .trainers__trainer .trainer__overlay > * {
+.trainers .container .trainers__trainer .trainer__overlay > * {
   transform: translateY(2rem);
   transition: transform 0.3s;
 }
-.trainers .trainers__trainer .trainer__overlay .trainer__title {
+.trainers .container .trainers__trainer .trainer__overlay .trainer__title {
   font-size: 2.5rem;
   margin-bottom: 1.4rem;
 }
 @media screen and (max-width: 600px) {
-  .trainers .trainers__trainer .trainer__overlay .trainer__title {
+  .trainers .container .trainers__trainer .trainer__overlay .trainer__title {
     font-size: 2rem;
   }
 }
-.trainers .trainers__trainer .trainer__overlay .trainer__description {
+.trainers .container .trainers__trainer .trainer__overlay .trainer__description {
   font-size: 1.6rem;
   text-align: center;
 }
 @media screen and (max-width: 600px) {
-  .trainers .trainers__trainer .trainer__overlay .trainer__description {
+  .trainers .container .trainers__trainer .trainer__overlay .trainer__description {
     font-size: 1.4rem;
   }
 }
-.trainers .trainer__overlay--blur {
+.trainers .container .trainer__overlay--blur {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -403,6 +405,7 @@ body {
   align-items: center;
   width: 320px;
   height: 100%;
+  background: #666666;
 }
 .theory .theory__item .item__title {
   font-size: 4rem;
@@ -484,8 +487,18 @@ body {
 .schedule .schedule__photo.aos-init {
   transform: translate3d(-100px, -20%, 0);
 }
+@media screen and (max-width: 1000px) {
+  .schedule .schedule__photo.aos-init {
+    transform: translate3d(-100px, 0, 0);
+  }
+}
 .schedule .schedule__photo.aos-init.aos-animate {
   transform: translateY(-20%) !important;
+}
+@media screen and (max-width: 1000px) {
+  .schedule .schedule__photo.aos-init.aos-animate {
+    transform: translateY(0) !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .schedule .schedule__photo {
@@ -640,8 +653,18 @@ body {
 .contact .contact__map.aos-init {
   transform: translate3d(100px, -10%, 0);
 }
+@media screen and (max-width: 1000px) {
+  .contact .contact__map.aos-init {
+    transform: translate3d(100px, 0, 0);
+  }
+}
 .contact .contact__map.aos-init.aos-animate {
   transform: translateY(-10%) !important;
+}
+@media screen and (max-width: 1000px) {
+  .contact .contact__map.aos-init.aos-animate {
+    transform: translateY(0) !important;
+  }
 }
 @media screen and (max-width: 1000px) {
   .contact .contact__map {

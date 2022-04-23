@@ -21,8 +21,14 @@
     animation: photoPositionY 9s ease-in-out infinite alternate;
     &.aos-init {
       transform: translate3d(-100px, -20%, 0);
+      @include tablet {
+        transform: translate3d(-100px, 0, 0);
+      }
       &.aos-animate {
         transform: translateY(-20%) !important;
+        @include tablet {
+          transform: translateY(0) !important;
+        }
       }
     }
     @include tablet {

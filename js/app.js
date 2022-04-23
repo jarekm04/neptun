@@ -17,6 +17,7 @@ const swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
+    initialSlide: 3,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
@@ -26,10 +27,6 @@ const swiper = new Swiper(".mySwiper", {
     },
     pagination: {
         el: ".swiper-pagination",
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
     },
 });
 
