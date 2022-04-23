@@ -168,6 +168,7 @@ body {
   .homePage .homePage__video {
     width: 100%;
     height: auto;
+    min-height: 100vh;
   }
 }
 @media (max-aspect-ratio: 16/9) {
@@ -477,9 +478,14 @@ body {
   background-image: url("../../assets/box-cutted.jpg");
   background-size: cover;
   background-position: center;
-  transform: translateY(-20%);
   -webkit-animation: photoPositionY 9s ease-in-out infinite alternate;
           animation: photoPositionY 9s ease-in-out infinite alternate;
+}
+.schedule .schedule__photo.aos-init {
+  transform: translate3d(-100px, -20%, 0);
+}
+.schedule .schedule__photo.aos-init.aos-animate {
+  transform: translateY(-20%) !important;
 }
 @media screen and (max-width: 1000px) {
   .schedule .schedule__photo {
@@ -631,8 +637,11 @@ body {
 .contact .contact__details .details__item .item__data:hover {
   color: #2b5379;
 }
-.contact .contact__map {
-  transform: translateY(-10%);
+.contact .contact__map.aos-init {
+  transform: translate3d(100px, -10%, 0);
+}
+.contact .contact__map.aos-init.aos-animate {
+  transform: translateY(-10%) !important;
 }
 @media screen and (max-width: 1000px) {
   .contact .contact__map {

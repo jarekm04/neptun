@@ -36,7 +36,12 @@
     }
   }
   .contact__map {
-    transform: translateY(-10%);
+    &.aos-init {
+      transform: translate3d(100px, -10%, 0);
+      &.aos-animate {
+        transform: translateY(-10%) !important;
+      }
+    }
     @include tablet {
       width: 100%;
       transform: translateY(0);
