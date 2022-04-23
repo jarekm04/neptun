@@ -2,7 +2,10 @@
   height: 700px;
   background-color: #2d2d2d;
   color: $color-white;
-  scroll-margin-top: $nav-offset-top;
+  scroll-margin-top: calc(#{$nav-offset-top} - 0.1rem);
+  @include mobile {
+    height: 550px;
+  }
   .theory__item {
     display: flex;
     flex-direction: column;

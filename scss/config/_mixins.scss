@@ -26,7 +26,11 @@
   text-decoration: none;
   transition: .2s ease-in-out;
   border-radius: 10rem;
+  text-align: center;
   &:hover {
     filter: grayscale(1);
+  }
+  @include mobile {
+    font-size: 1.6rem;
   }
 }
