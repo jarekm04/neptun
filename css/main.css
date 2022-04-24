@@ -228,7 +228,7 @@ body {
 .news {
   background-color: #e3e3e3;
   color: #000;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 99px;
   padding: 2rem;
 }
 .news .news__title {
@@ -302,6 +302,9 @@ body {
   padding-left: 0.5rem;
 }
 
+.trainers {
+  scroll-margin-top: 99px;
+}
 .trainers .container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
@@ -314,7 +317,6 @@ body {
   background-position: center;
   background-attachment: fixed;
   padding: 5rem 2rem;
-  scroll-margin-top: calc(100px - 0.1rem);
 }
 @media screen and (max-width: 600px) {
   .trainers .container {
@@ -391,7 +393,7 @@ body {
   height: 700px;
   background-color: #2d2d2d;
   color: #fff;
-  scroll-margin-top: calc(100px - 0.1rem);
+  scroll-margin-top: 99px;
 }
 @media screen and (max-width: 600px) {
   .theory {
@@ -465,7 +467,8 @@ body {
   background-color: #e3e3e3;
   color: #000;
   padding: 2rem 3rem;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 99px;
+  overflow-x: clip;
 }
 @media screen and (max-width: 1000px) {
   .schedule {
@@ -611,9 +614,10 @@ body {
 .contact {
   display: flex;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 3rem 2rem 3rem;
   background: #222831;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 99px;
+  overflow-x: clip;
 }
 @media screen and (max-width: 1000px) {
   .contact {

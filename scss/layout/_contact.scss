@@ -1,9 +1,10 @@
 .contact {
   display: flex;
   justify-content: space-between;
-  padding: 0 3rem;
+  padding: 0 3rem 2rem 3rem;
   background: $color-mixedGray;
   scroll-margin-top: $nav-offset-top;
+  overflow-x: clip;
   @include tablet {
     flex-direction: column;
     padding: 1rem 3rem;
