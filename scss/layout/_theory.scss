@@ -1,47 +1,77 @@
 .theory {
-  height: 700px;
-  background-color: #2d2d2d;
+  height: auto;
+  background-color: $color-darkGray;
   color: $color-white;
   scroll-margin-top: $nav-offset-top;
+  padding: 8rem 0;
+  @include tablet {
+    height: 60rem;
+  }
   @include mobile {
-    height: 550px;
+    height: 55rem;
   }
-  .theory__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 320px;
-    height: 100%;
-    background: $color-mediumGray;
-    .item__title {
-      font-size: 4rem;
-      text-align: center;
-    }
-    .item__img {
-      width: 90px;
-      height: 90px;
-      color: black;
-    }
-    .item__text {
-      font-size: 2rem;
-      text-align: center;
-    }
-    .item__anchor {
-      @include buttonStyle;
+
+  .swiper {
+    width: 100%;
+    padding-bottom: 5rem;
+
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 32rem;
+      height: 40rem;
+      @media (max-width: 400px) {
+        width: 28rem;
+        height: 36rem;
+      }
+
+      .theory__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 32rem;
+        height: 100%;
+        background: $color-mediumGray;
+        @media (max-width: 400px) {
+          width: 28rem;
+        }
+
+        .item__title {
+          font-size: 4rem;
+          text-align: center;
+          @media (max-width: 400px) {
+            font-size: 3rem;
+          }
+        }
+
+        .item__img {
+          width: 9rem;
+          height: 9rem;
+          color: black;
+          @media (max-width: 400px) {
+            width: 8rem;
+            height: 8rem;
+          }
+        }
+
+        .item__text {
+          font-size: 2rem;
+          text-align: center;
+          @media (max-width: 400px) {
+            font-size: 1.6rem;
+          }
+        }
+
+        .item__anchor {
+          @include buttonStyle;
+          @media (max-width: 400px) {
+            font-size: 1.4rem;
+            height: 4.5rem;
+            padding: 0 2rem;
+          }
+        }
+      }
     }
   }
-}
-
-.swiper {
-  width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 320px;
-  height: 400px;
 }

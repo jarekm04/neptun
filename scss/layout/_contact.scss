@@ -10,6 +10,7 @@
     padding: 1rem 3rem;
     align-items: center;
   }
+
   .contact__details {
     margin-top: 11rem;
     padding-right: 1rem;
@@ -17,12 +18,15 @@
       margin-top: 2rem;
       padding-right: 0;
     }
+
     .details__item {
       margin-bottom: 3rem;
+
       .item__icon {
         font-size: 3rem;
         margin-right: 1rem;
       }
+
       .item__data {
         font-size: 2rem;
         line-height: 2.5rem;
@@ -30,29 +34,20 @@
         color: $color-white;
         text-decoration: none;
         transition: .2s ease-in-out;
+
         &:hover {
           color: $color-secondary;
         }
       }
     }
   }
+
   .contact__map {
-    &.aos-init {
-      transform: translate3d(100px, -10%, 0);
-      @include tablet {
-        transform: translate3d(100px, 0, 0);
-      }
-      &.aos-animate {
-        transform: translateY(-10%) !important;
-        @include tablet {
-          transform: translateY(0) !important;
-        }
-      }
-    }
     @include tablet {
       width: 100%;
       transform: translateY(0);
     }
+
     iframe {
       width: 60rem;
       height: 45rem;

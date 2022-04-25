@@ -1,122 +1,115 @@
 .schedule {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   background-color: $color-lightGray;
   color: $color-black;
-  padding: 2rem 3rem;
+  padding: 5rem 2rem 10rem 2rem;
   scroll-margin-top: $nav-offset-top;
-  overflow-x: clip;
-  @include tablet {
-    flex-direction: column-reverse;
-    padding: 2rem 0 0 0;
-  }
-  .schedule__photo {
-    width: 40%;
-    max-width: 59rem;
-    min-width: 45rem;
-    height: 60rem;
-    background-image: url("../../assets/box-cutted.jpg");
-    background-size: cover;
-    background-position: center;
-    animation: photoPositionY 9s ease-in-out infinite alternate;
-    &.aos-init {
-      transform: translate3d(-100px, -20%, 0);
-      @include tablet {
-        transform: translate3d(-100px, 0, 0);
-      }
-      &.aos-animate {
-        transform: translateY(-20%) !important;
-        @include tablet {
-          transform: translateY(0) !important;
-        }
-      }
-    }
-    @include tablet {
-      width: 100%;
-      height: 40rem;
-      min-width: 0;
-      max-width: none;
-      background-position-y: 20%;
-      transform: translateY(0);
-    }
-    @include mobile {
-      height: 25rem;
-    }
-  }
+
   .schedule__content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-basis: 50%;
-    margin-top: 10rem;
-    @include tablet {
-      margin-top: 0;
-      margin-bottom: 2rem;
-    }
+    width: 100%;
+
     .content__title {
-      font-size: 4rem;
+      font-size: 6rem;
       margin-bottom: 1rem;
+      text-align: center;
       @include mobile {
+        font-size: 4rem;
+      }
+
+      .material-icons {
         font-size: 3rem;
+        @include mobile {
+          display: none;
+        }
       }
     }
+
     .content__address {
-      font-size: 2rem;
+      font-size: 2.3rem;
       text-align: center;
       margin-bottom: 4rem;
+      color: $color-black;
+      text-decoration: none;
       @include mobile {
-        font-size: 1.8rem;
-        padding: 0 0.5rem;
+        font-size: 2rem;
+      }
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0.2rem;
+        display: block;
+        background: $color-black;
+        transition: .3s ease-in-out;
+      }
+
+      &:hover:after {
+        width: 100%;
       }
     }
-    .content__columns {
+
+    .content__table {
       display: flex;
-      @include mobile {
-        flex-direction: column;
-      }
-      .column {
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+
+      .table__column {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
         align-items: center;
-        min-width: 20rem;
-        padding: 0 1.5rem;
-        @include tablet {
-          width: 50%;
-        }
-        @include mobile {
-          width: 100%;
-          &:nth-child(1) {
-            padding-bottom: 2rem;
+        gap: 3rem;
+
+        .column__day {
+          font-size: 2.5rem;
+          text-transform: uppercase;
+          @include mobile {
+            font-size: 2rem;
           }
         }
-        .column__title {
-          font-size: 2.5rem;
-          font-weight: bold;
+
+        .column__square {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 28rem;
+          height: 15rem;
           text-align: center;
-          margin-bottom: 0.7rem;
-        }
-        .column__subtitle {
-          font-size: 1.6rem;
-          margin-bottom: 2.2rem;
-        }
-        .column__img {
-          margin-bottom: 1rem;
-          width: 6rem;
-          height: 6rem;
-        }
-        .column__time {
-          font-size: 2rem;
-          text-decoration: underline;
+          color: $color-white;
+          background: $color-mediumGray;
+          box-shadow: 0 0 6rem 0.7rem rgb(66 68 90);
+          animation: shadow 5s ease-in-out infinite alternate;
+          @include mobile {
+            width: 23rem;
+            height: 12rem;
+          }
+
+          &:nth-child(odd) {
+            background: $color-mixedGray;
+          }
+
+          .square__time,
+          .square__group {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            @include mobile {
+              font-size: 1.6rem;
+            }
+          }
         }
       }
     }
   }
 }
 
-@keyframes photoPositionY {
+@keyframes shadow {
   100% {
-    background-position-y: 60%;
+    box-shadow: 0 0 6rem -5rem rgb(66 68 90);
   }
 }

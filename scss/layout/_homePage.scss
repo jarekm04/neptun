@@ -1,6 +1,7 @@
 .homePage {
   position: relative;
   overflow: hidden;
+
   .homePage__video {
     opacity: 0.5;
     filter: brightness(50%) grayscale(20%);
@@ -17,11 +18,13 @@
       transform: translateX(-50%);
     }
   }
+
   .homepage__textBox {
     position: absolute;
     top: 33%;
     left: 10%;
     max-width: 50%;
+
     .textBox__title {
       font-size: 5.6rem;
       margin-bottom: 4rem;
@@ -30,11 +33,13 @@
         font-size: 3rem;
       }
     }
+
     .textBox__desc {
       font-size: 1.8rem;
       margin-bottom: 3rem;
       letter-spacing: 0.1rem;
     }
+
     .textBox__btn {
       @include buttonStyle;
     }
