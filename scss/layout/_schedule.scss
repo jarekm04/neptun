@@ -19,13 +19,6 @@
       @include mobile {
         font-size: 4rem;
       }
-
-      .material-icons {
-        font-size: 3rem;
-        @include mobile {
-          display: none;
-        }
-      }
     }
 
     .content__address {
