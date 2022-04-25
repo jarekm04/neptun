@@ -726,4 +726,27 @@ body {
     width: 100%;
   }
 }
+
+.theory.theoryPages {
+  margin-top: 3rem;
+  background-color: #000;
+}
+.theory.theoryPages .swiper .swiper-slide {
+  width: 17rem;
+  height: 10rem;
+}
+.theory.theoryPages .swiper .swiper-slide .theory__item {
+  width: 17rem;
+  height: 10rem;
+}
+.theory.theoryPages .swiper .swiper-slide .theory__item .item__title {
+  font-size: 1.6rem;
+}
+.theory.theoryPages .swiper .swiper-slide .theory__item .item__anchor {
+  height: 4rem;
+  font-size: 1.4rem;
+}
+.theory.theoryPages .swiper .swiper-pagination .swiper-pagination-bullet {
+  background-color: white;
+}
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,26 @@
+.theory.theoryPages {
+  margin-top: 3rem;
+  background-color: $color-black;
+  .swiper {
+    .swiper-slide {
+      width: 17rem;
+      height: 10rem;
+      .theory__item {
+        width: 17rem;
+        height: 10rem;
+        .item__title {
+          font-size: 1.6rem;
+        }
+        .item__anchor {
+          height: 4rem;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .swiper-pagination {
+      .swiper-pagination-bullet {
+        background-color: white;
+      }
+    }
+  }
+}
