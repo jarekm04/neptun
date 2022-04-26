@@ -12,7 +12,13 @@ document.querySelectorAll(".menu__item").forEach( item => item.addEventListener(
 }))
 
 //swiper theory carousel
-const $theoryContentClassList = [...document.querySelector(".theory-content").classList];
+const $theory = document.querySelector(".theory");
+let $theoryContentClassList;
+
+if ($theory.classList.contains("theoryPages")) {
+    $theoryContentClassList = [...document.querySelector(".theory-content").classList];
+}
+
 const handleInitialSlide = (sectionClasses) => {
     if (sectionClasses.includes("history")) {
         return 0;
@@ -36,7 +42,7 @@ const swiper = new Swiper(".mySwiper", {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    initialSlide: handleInitialSlide($theoryContentClassList),
+    initialSlide: $theory.classList.contains("theoryPages") ? handleInitialSlide($theoryContentClassList) : 3,
     coverflowEffect: {
         rotate: 50,
         stretch: 0,

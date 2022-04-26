@@ -12,7 +12,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   color: #fff;
-  background-color: #000;
+  background-color: #e3e3e3;
 }
 
 .container {
@@ -158,6 +158,7 @@ body {
 .homePage {
   position: relative;
   overflow: hidden;
+  background-color: #000;
 }
 .homePage .homePage__video {
   opacity: 0.5;
@@ -672,9 +673,9 @@ body {
 }
 
 .theory.theoryPages {
+  height: 38vh;
   padding: 13rem 0 3rem 0;
-  background-image: url("../assets/kick.jpg");
-  background-size: cover;
+  background-color: #e3e3e3;
 }
 .theory.theoryPages .swiper .swiper-slide {
   width: 17rem;
@@ -684,8 +685,7 @@ body {
   width: 17rem;
   height: 10rem;
   background-color: #000;
-  opacity: 0.8;
-  border-radius: 2rem;
+  opacity: 0.9;
 }
 .theory.theoryPages .swiper .swiper-slide .theory__item .item__title {
   font-size: 1.4rem;
@@ -696,20 +696,28 @@ body {
   padding: 0 2rem;
 }
 .theory.theoryPages .swiper .swiper-pagination .swiper-pagination-bullet {
-  background-color: white;
+  background-color: #000;
 }
 
 .theory-content {
   background-color: #e3e3e3;
-  color: #000;
+  color: #2d2d2d;
+  padding: 0 4rem;
 }
 .theory-content .content__title {
-  font-size: 3.5rem;
+  font-size: 3.2rem;
+  text-align: center;
+  padding: 2rem 0;
+  letter-spacing: 0.1rem;
 }
 .theory-content .content__headline {
   font-size: 2.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 .theory-content .content__text {
   font-size: 1.8rem;
+  line-height: 2.2rem;
+  padding-bottom: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

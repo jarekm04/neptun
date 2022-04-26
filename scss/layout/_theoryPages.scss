@@ -1,7 +1,9 @@
 .theory.theoryPages {
+  height: 38vh;
   padding: 13rem 0 3rem 0;
-  background-image: url("../assets/kick.jpg");
-  background-size: cover;
+  //background-image: url("../assets/kick.jpg");
+  //background-size: cover;
+  background-color: $color-lightGray;
   .swiper {
     .swiper-slide {
       width: 17rem;
@@ -10,8 +12,7 @@
         width: 17rem;
         height: 10rem;
         background-color: $color-black;
-        opacity: 0.8;
-        border-radius: 2rem;
+        opacity: 0.9;
         .item__title {
           font-size: 1.4rem;
         }
@@ -24,7 +25,7 @@
     }
     .swiper-pagination {
       .swiper-pagination-bullet {
-        background-color: white;
+        background-color: $color-black;
       }
     }
   }
@@ -32,15 +33,23 @@
 
 .theory-content {
   background-color: $color-lightGray;
-  color: $color-black;
+  color: $color-darkGray;
+  padding: 0 4rem;
 
   .content__title {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
+    text-align: center;
+    padding: 2rem 0;
+    letter-spacing: 0.1rem;
   }
   .content__headline {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
+    padding-left: 1rem;
   }
   .content__text {
     font-size: 1.8rem;
+    line-height: 2.2rem;
+    padding-bottom: 1rem;
   }
 }
