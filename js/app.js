@@ -12,12 +12,31 @@ document.querySelectorAll(".menu__item").forEach( item => item.addEventListener(
 }))
 
 //swiper theory carousel
+const $theoryContentClassList = [...document.querySelector(".theory-content").classList];
+const handleInitialSlide = (sectionClasses) => {
+    if (sectionClasses.includes("history")) {
+        return 0;
+    } else if (sectionClasses.includes("secrets")) {
+        return 1;
+    } else if (sectionClasses.includes("techniques")) {
+        return 2;
+    } else if (sectionClasses.includes("fight")) {
+        return 3;
+    } else if (sectionClasses.includes("selfDefense")) {
+        return 4;
+    } else if (sectionClasses.includes("arrangements")) {
+        return 5;
+    } else if (sectionClasses.includes("hardening")) {
+        return 6;
+    }
+}
+
 const swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: "auto",
-    initialSlide: 3,
+    initialSlide: handleInitialSlide($theoryContentClassList),
     coverflowEffect: {
         rotate: 50,
         stretch: 0,
