@@ -73,5 +73,27 @@
         }
       }
     }
+    .swiper-button-prev {
+      left: 38%;
+      top: 35%;
+      right: auto;
+      @include tablet {
+        left: 30%;
+      }
+      @include mobile {
+        left: 15%;
+      }
+    }
+    .swiper-button-next {
+      right: 38%;
+      top: 35%;
+      left: auto;
+      @include tablet {
+        right: 30%;
+      }
+      @include mobile {
+        right: 15%;
+      }
+    }
   }
 }

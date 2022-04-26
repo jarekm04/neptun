@@ -7,6 +7,7 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  --swiper-theme-color: white !important;
 }
 
 body {
@@ -494,6 +495,36 @@ body {
     padding: 0 2rem;
   }
 }
+.theory .swiper .swiper-button-prev {
+  left: 38%;
+  top: 35%;
+  right: auto;
+}
+@media screen and (max-width: 1000px) {
+  .theory .swiper .swiper-button-prev {
+    left: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .theory .swiper .swiper-button-prev {
+    left: 15%;
+  }
+}
+.theory .swiper .swiper-button-next {
+  right: 38%;
+  top: 35%;
+  left: auto;
+}
+@media screen and (max-width: 1000px) {
+  .theory .swiper .swiper-button-next {
+    right: 30%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .theory .swiper .swiper-button-next {
+    right: 15%;
+  }
+}
 
 .schedule {
   display: flex;
@@ -673,8 +704,9 @@ body {
 }
 
 .theory.theoryPages {
-  height: 38vh;
-  padding: 13rem 0 3rem 0;
+  --swiper-navigation-size: 3rem;
+  height: 25rem;
+  padding: 13rem 0 5rem 0;
   background-color: #e3e3e3;
 }
 .theory.theoryPages .swiper .swiper-slide {
@@ -684,8 +716,7 @@ body {
 .theory.theoryPages .swiper .swiper-slide .theory__item {
   width: 17rem;
   height: 10rem;
-  background-color: #000;
-  opacity: 0.9;
+  background-color: #2d2d2d;
 }
 .theory.theoryPages .swiper .swiper-slide .theory__item .item__title {
   font-size: 1.4rem;
@@ -698,11 +729,44 @@ body {
 .theory.theoryPages .swiper .swiper-pagination .swiper-pagination-bullet {
   background-color: #000;
 }
+.theory.theoryPages .swiper .swiper-button-prev {
+  left: 43%;
+  top: 35%;
+  right: auto;
+  color: #007aff;
+}
+@media screen and (max-width: 1000px) {
+  .theory.theoryPages .swiper .swiper-button-prev {
+    left: 34%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .theory.theoryPages .swiper .swiper-button-prev {
+    left: 15%;
+  }
+}
+.theory.theoryPages .swiper .swiper-button-next {
+  right: 43%;
+  top: 35%;
+  left: auto;
+  color: #007aff;
+}
+@media screen and (max-width: 1000px) {
+  .theory.theoryPages .swiper .swiper-button-next {
+    right: 34%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .theory.theoryPages .swiper .swiper-button-next {
+    right: 15%;
+  }
+}
 
 .theory-content {
   background-color: #e3e3e3;
   color: #2d2d2d;
   padding: 0 4rem;
+  margin-bottom: 3rem;
 }
 .theory-content .content__title {
   font-size: 3.2rem;
