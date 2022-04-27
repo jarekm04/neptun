@@ -21,35 +21,70 @@
         <div class="row justify-content-center my-4">
 
             <div class="col-lg-6">
-                <form>
-                    <label for="time" class="form-label">Data newsa:</label>
-                    <input type="date" id="time" class="form-control mb-3">
-
-                    <label for="icon" class="form-label">Wybierz ikonkę</label>
-                    <select id="icon" class="form-select">
-                        <option value="triangle">Informacja</option>
-                        <option value="circle">Wykrzyknik</option>
-                    </select>
-                    <div class="fs-3 text-end">
-                        <i class="fa-solid fa-circle-info"></i>
-                        <i class="fa-solid fa-triangle-exclamation"></i><br>
+                <form class="needs-validation" novalidate>
+                    <div class="col-12">
+                        <label for="icon" class="form-label">Wybierz ikonkę</label>
+                        <select id="icon" class="form-select" required>
+                            <option value="triangle">Informacja (kółko)</option>
+                            <option value="circle">Wykrzyknik (trójkąt)</option>
+                        </select>
+                        <div class="fs-3 text-end">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <i class="fa-solid fa-triangle-exclamation"></i><br>
+                        </div>
                     </div>
 
-                    <label for="name" class="form-label">Kto dodaje newsa?</label>
-                    <input type="text" id="name" class="form-control mb-3" placeholder="Imię? Pseudonim?">
+                    <div class="col-12 mb-3">
+                        <label for="name" class="form-label">Kto dodaje newsa?</label>
+                        <input type="text" id="name" class="form-control" placeholder="Imię? Pseudonim?" required>
+                        <div class="valid-feedback">
+                            W porządku!
+                        </div>
+                        <div class="invalid-feedback">
+                            Proszę uzupełnij kto dodaje newsa.
+                        </div>
+                    </div>
 
-                    <label for="newsInfo" class="form-label">Treść newsa</label>
-                    <textarea id="newsInfo" class="form-control mb-3" style="height: 250px" placeholder="Tutaj treść newsa"></textarea>
+                    <div class="col-12 mb-3">
+                        <label for="newsInfo" class="form-label">Treść newsa</label>
+                        <textarea id="newsInfo" class="form-control" style="height: 250px" placeholder="Tutaj treść newsa" required></textarea>
+                        <div class="valid-feedback">
+                            W porządku!
+                        </div>
+                        <div class="invalid-feedback">
+                            Proszę treść newsa.
+                        </div>
+                    </div>
 
                     <div class="popoverBox border border-danger border-3 p-3">
                         <label for="popoverNews">Czy news ma wyświetlać się jako okienko po wejściu na stronę?</label>
-                        <select id="popoverNews" class="form-select">
+                        <select id="popoverNews" class="form-select" required>
                             <option value="no">Nie</option>
                             <option value="yes">Tak</option>
                         </select>
 
-                        <label for="popoverNewsTime">Do kiedy ma się wyświetlać?</label>
-                        <input type="date" id="popoverNewsTime" class="form-control">
+                        <div class="optionalTime" style="display: none">
+                            <label for="popoverNewsTime">Do kiedy ma się wyświetlać?</label>
+                            <input type="date" id="popoverNewsTime" class="form-control">
+                            <div class="invalid-feedback">
+                                Wybierz datę do kiedy wyświetlać newsa.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 mt-2">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label class="form-check-label" for="invalidCheck">
+                                Czy wszystkie dane są poprawne?
+                            </label>
+                            <div class="valid-feedback">
+                                W porządku!
+                            </div>
+                            <div class="invalid-feedback">
+                                Musisz zaznaczyć, aby wysłać formularz.
+                            </div>
+                        </div>
                     </div>
 
                     <div class="mb-4 mt-4 text-center">
@@ -62,5 +97,28 @@
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
+<script type="module" src="../firebase.js"></script>
+<script type="module" src="./formJS.js"></script>
 </body>
 </html>
