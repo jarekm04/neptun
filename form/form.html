@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Neptun Formularz</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
 
@@ -14,17 +15,46 @@
     <div class="container-lg">
         <div class="text-center">
             <h1>Formularz do newsa - Neptun</h1>
-<!--            data, ikonka, tytuł artykułu, autor posta, tekst artykułu, czy ma wyświetlać się na stronie głównej, (przez ile)-->
+            <hr>
         </div>
 
-        <div class="row justify-content-center my-5">
+        <div class="row justify-content-center my-4">
 
             <div class="col-lg-6">
                 <form>
                     <label for="time" class="form-label">Data newsa:</label>
-                    <input type="date" id="time" class="form-control">
+                    <input type="date" id="time" class="form-control mb-3">
 
                     <label for="icon" class="form-label">Wybierz ikonkę</label>
+                    <select id="icon" class="form-select">
+                        <option value="triangle">Informacja</option>
+                        <option value="circle">Wykrzyknik</option>
+                    </select>
+                    <div class="fs-3 text-end">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <i class="fa-solid fa-triangle-exclamation"></i><br>
+                    </div>
+
+                    <label for="name" class="form-label">Kto dodaje newsa?</label>
+                    <input type="text" id="name" class="form-control mb-3" placeholder="Imię? Pseudonim?">
+
+                    <label for="newsInfo" class="form-label">Treść newsa</label>
+                    <textarea id="newsInfo" class="form-control mb-3" style="height: 250px" placeholder="Tutaj treść newsa"></textarea>
+
+                    <div class="popoverBox border border-danger border-3 p-3">
+                        <label for="popoverNews">Czy news ma wyświetlać się jako okienko po wejściu na stronę?</label>
+                        <select id="popoverNews" class="form-select">
+                            <option value="no">Nie</option>
+                            <option value="yes">Tak</option>
+                        </select>
+
+                        <label for="popoverNewsTime">Do kiedy ma się wyświetlać?</label>
+                        <input type="date" id="popoverNewsTime" class="form-control">
+                    </div>
+
+                    <div class="mb-4 mt-4 text-center">
+                        <button type="submit" class="btn btn-primary">Potwierdź wysłanie Newsa</button>
+                    </div>
                 </form>
             </div>
         </div>

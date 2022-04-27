@@ -3,17 +3,21 @@
   height: 25rem;
   padding: 13rem 0 5rem 0;
   background-color: $color-lightGray;
+
   .swiper {
     .swiper-slide {
       width: 17rem;
       height: 10rem;
+
       .theory__item {
         width: 17rem;
         height: 10rem;
         background-color: $color-darkGray;
+
         .item__title {
           font-size: 1.4rem;
         }
+
         .item__anchor {
           height: 3.4rem;
           font-size: 1.4rem;
@@ -21,16 +25,24 @@
         }
       }
     }
+
     .swiper-pagination {
       .swiper-pagination-bullet {
         background-color: $color-black;
       }
     }
+
     .swiper-button-prev {
       left: 43%;
       top: 35%;
       right: auto;
-      color: #007aff;
+      color: $color-arrowHover;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        color: $color-white;
+      }
+
       @include tablet {
         left: 34%;
       }
@@ -38,11 +50,18 @@
         left: 15%;
       }
     }
+
     .swiper-button-next {
       right: 43%;
       top: 35%;
       left: auto;
-      color: #007aff;
+      color: $color-arrowHover;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        color: $color-white;
+      }
+
       @include tablet {
         right: 34%;
       }
@@ -65,11 +84,13 @@
     padding: 2rem 0;
     letter-spacing: 0.1rem;
   }
+
   .content__headline {
     font-size: 2.5rem;
     margin-bottom: 1rem;
     padding-left: 1rem;
   }
+
   .content__text {
     font-size: 1.8rem;
     line-height: 2.2rem;

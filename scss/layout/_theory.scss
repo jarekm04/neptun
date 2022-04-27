@@ -73,10 +73,17 @@
         }
       }
     }
+
     .swiper-button-prev {
       left: 38%;
       top: 35%;
       right: auto;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        color: $color-arrowHover;
+      }
+
       @include tablet {
         left: 30%;
       }
@@ -84,10 +91,17 @@
         left: 15%;
       }
     }
+
     .swiper-button-next {
       right: 38%;
       top: 35%;
       left: auto;
+      transition: .2s ease-in-out;
+
+      &:hover {
+        color: $color-arrowHover;
+      }
+
       @include tablet {
         right: 30%;
       }

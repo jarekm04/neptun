@@ -303,6 +303,7 @@ body {
 
 .trainers {
   scroll-margin-top: 99px;
+  background-color: #000;
 }
 .trainers .container {
   display: grid;
@@ -499,6 +500,10 @@ body {
   left: 38%;
   top: 35%;
   right: auto;
+  transition: 0.2s ease-in-out;
+}
+.theory .swiper .swiper-button-prev:hover {
+  color: #007aff;
 }
 @media screen and (max-width: 1000px) {
   .theory .swiper .swiper-button-prev {
@@ -514,6 +519,10 @@ body {
   right: 38%;
   top: 35%;
   left: auto;
+  transition: 0.2s ease-in-out;
+}
+.theory .swiper .swiper-button-next:hover {
+  color: #007aff;
 }
 @media screen and (max-width: 1000px) {
   .theory .swiper .swiper-button-next {
@@ -734,6 +743,10 @@ body {
   top: 35%;
   right: auto;
   color: #007aff;
+  transition: 0.2s ease-in-out;
+}
+.theory.theoryPages .swiper .swiper-button-prev:hover {
+  color: #fff;
 }
 @media screen and (max-width: 1000px) {
   .theory.theoryPages .swiper .swiper-button-prev {
@@ -750,6 +763,10 @@ body {
   top: 35%;
   left: auto;
   color: #007aff;
+  transition: 0.2s ease-in-out;
+}
+.theory.theoryPages .swiper .swiper-button-next:hover {
+  color: #fff;
 }
 @media screen and (max-width: 1000px) {
   .theory.theoryPages .swiper .swiper-button-next {
