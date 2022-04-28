@@ -79,21 +79,49 @@
   margin-bottom: 3rem;
 
   .content__title {
-    font-size: 3.2rem;
+    font-size: 6rem;
     text-align: center;
     padding: 2rem 0;
     letter-spacing: 0.1rem;
+    @include tablet {
+      font-size: 4.7rem;
+    }
   }
 
-  .content__headline {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    padding-left: 1rem;
-  }
+  .content__box {
+    column-count: 2;
+    column-gap: 4rem;
+    @include tablet {
+      column-count: auto;
+    }
 
-  .content__text {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    padding-bottom: 1rem;
+    &:first-of-type:first-letter {
+      font-size: 4rem;
+      font-weight: bold;
+      font-family: Serif;
+      @include tablet {
+        font-size: 3.5rem;
+      }
+    }
+    .box__headline {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+      margin-bottom: 1rem;
+      padding-left: 1rem;
+      @include tablet {
+        font-size: 2.2rem;
+        line-height: 3rem;
+      }
+    }
+
+    .box__text {
+      font-size: 1.8rem;
+      line-height: 2.5rem;
+      padding-bottom: 1rem;
+      @include tablet {
+        font-size: 1.6rem;
+        line-height: 2.2rem;
+      }
+    }
   }
 }

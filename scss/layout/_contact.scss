@@ -1,59 +1,68 @@
 .contact {
-  display: flex;
-  justify-content: space-between;
   padding: 0 3rem 5rem 3rem;
   background: $color-mixedGray;
   scroll-margin-top: $nav-offset-top;
   overflow-x: clip;
-  @include tablet {
-    flex-direction: column;
-    padding: 1rem 3rem;
-    align-items: center;
-  }
-
-  .contact__details {
-    margin-top: 11rem;
-    padding-right: 1rem;
+  .container {
+    display: flex;
+    justify-content: space-between;
     @include tablet {
-      margin-top: 2rem;
-      padding-right: 0;
+      flex-direction: column;
+      padding: 1rem 3rem;
+      align-items: center;
     }
 
-    .details__item {
-      margin-bottom: 3rem;
-
-      .item__icon {
-        font-size: 3rem;
-        margin-right: 1rem;
+    .contact__details {
+      margin-top: 11rem;
+      padding-right: 1rem;
+      @include tablet {
+        margin-top: 2rem;
+        padding-right: 0;
       }
 
-      .item__data {
-        font-size: 2rem;
-        line-height: 2.5rem;
-        letter-spacing: 0.1rem;
-        color: $color-white;
-        text-decoration: none;
-        transition: .2s ease-in-out;
+      .details__item {
+        margin-bottom: 3rem;
 
-        &:hover {
-          color: $color-secondary;
+        .item__icon {
+          font-size: 3rem;
+          margin-right: 1rem;
+          @include tablet {
+            font-size: 2.5rem;
+          }
+        }
+
+        .item__data {
+          font-size: 2rem;
+          line-height: 2.5rem;
+          letter-spacing: 0.1rem;
+          color: $color-white;
+          text-decoration: none;
+          transition: .2s ease-in-out;
+          @include tablet {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+          }
+
+          &:hover {
+            color: $color-secondary;
+          }
         }
       }
     }
-  }
 
-  .contact__map {
-    margin-top: 2rem;
-    @include tablet {
-      width: 100%;
-      margin-top: 0;
-    }
-
-    iframe {
-      width: 60rem;
-      height: 45rem;
+    .contact__map {
+      margin-top: 2rem;
       @include tablet {
         width: 100%;
+        margin-top: 0;
+      }
+
+      iframe {
+        width: 60rem;
+        height: 45rem;
+        @include tablet {
+          width: 100%;
+        }
       }
     }
   }
