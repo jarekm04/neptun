@@ -8,6 +8,7 @@ const $newsContent = document.getElementById("newsInfo");
 const $isPopover = document.getElementById("popoverNews");
 const $optionalTimeDiv = document.querySelector(".optionalTime")
 const $popoverTime = document.getElementById("popoverNewsTime");
+const $formCheckInput = document.querySelector(".form-check-input");
 const $formBtn = document.querySelector(".btn");
 
 $isPopover.addEventListener("change", () => {
@@ -38,15 +39,21 @@ $form.addEventListener("submit" , (e) => {
         return;
     }
 
-    // addDoc(collection(db, "News"), {
-    //     date: new Date().toLocaleDateString(),
-    //     icon: $icon.value,
-    //     name: $name.value.charAt(0).toUpperCase() + $name.value.slice(1),
-    //     newsContent: $newsContent.value.charAt(0).toUpperCase() + $newsContent.value.slice(1),
-    //     isPopover: $isPopover.value,
-    //     popoverTime: $isPopover.value,
-    // })
-    //     .then(() => {
-    //         $form.reset();
-    //     })
+    if (!$formCheckInput.checked) {
+        $formCheckInput.focus();
+        return;
+    }
+
+    addDoc(collection(db, "News"), {
+        date: new Date().toLocaleDateString(),
+        icon: $icon.value,
+        name: $name.value.charAt(0).toUpperCase() + $name.value.slice(1),
+        newsContent: $newsContent.value.charAt(0).toUpperCase() + $newsContent.value.slice(1),
+        isPopover: $isPopover.value,
+        popoverTime: $popoverTime.value.split("-").reverse().join("."),
+    })
+        .then(() => {
+            window.alert("Wysłano formularz z nowym newsem!");
+            location.reload();
+        })
 });
