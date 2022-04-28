@@ -45,12 +45,12 @@ $form.addEventListener("submit" , (e) => {
     }
 
     addDoc(collection(db, "News"), {
-        date: new Date().toLocaleDateString(),
+        date: new Date().toLocaleDateString().split(".").reverse().join("."),
         icon: $icon.value,
         name: $name.value.charAt(0).toUpperCase() + $name.value.slice(1),
         newsContent: $newsContent.value.charAt(0).toUpperCase() + $newsContent.value.slice(1),
         isPopover: $isPopover.value,
-        popoverTime: $popoverTime.value.split("-").reverse().join("."),
+        popoverTime: $popoverTime.value.split("-").join("."),
     })
         .then(() => {
             window.alert("Wysłano formularz z nowym newsem!");
