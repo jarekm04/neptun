@@ -46,6 +46,10 @@
           &:hover {
             color: $color-secondary;
           }
+
+          &:first-of-type {
+            display: flex;
+          }
         }
       }
     }

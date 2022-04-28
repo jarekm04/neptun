@@ -302,6 +302,10 @@ body {
 }
 
 .trainers {
+  background-image: url("../assets/neptun-logo-cutted.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   scroll-margin-top: 99px;
   background-color: #000;
 }
@@ -312,10 +316,7 @@ body {
   row-gap: 3rem;
   -moz-column-gap: 5rem;
        column-gap: 5rem;
-  background-image: url("../assets/neptun-logo-cutted.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  max-width: 89rem;
   padding: 5rem 2rem;
 }
 @media screen and (max-width: 600px) {
@@ -691,6 +692,9 @@ body {
 }
 .contact .container .contact__details .details__item .item__data:hover {
   color: #2b5379;
+}
+.contact .container .contact__details .details__item .item__data:first-of-type {
+  display: flex;
 }
 .contact .container .contact__map {
   margin-top: 2rem;

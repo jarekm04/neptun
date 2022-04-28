@@ -1,4 +1,8 @@
 .trainers {
+  background-image: url("../assets/neptun-logo-cutted.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   scroll-margin-top: $nav-offset-top;
   background-color: $color-black;
 
@@ -8,10 +12,7 @@
     justify-items: center;
     row-gap: 3rem;
     column-gap: 5rem;
-    background-image: url("../assets/neptun-logo-cutted.jpg");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    max-width: 89rem;
     padding: 5rem 2rem;
     @include mobile {
       grid-template-columns: unset;
