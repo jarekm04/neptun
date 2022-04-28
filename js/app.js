@@ -1,4 +1,7 @@
-//mobile hamburger menu
+import { db } from "../firebase.js";
+import { doc, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+
+//--------------------------------------mobile hamburger menu-------------------------------------
 const hamburgerIcon = document.querySelector(".hamburger");
 const menuList = document.querySelector(".header__menu");
 
@@ -11,7 +14,7 @@ document.querySelectorAll(".menu__item").forEach( item => item.addEventListener(
     menuList.classList.contains("active") ? hamburgerIcon.textContent = "cancel" : hamburgerIcon.textContent = "menu";
 }))
 
-//swiper theory carousel
+//----------------------------swiper theory carousel--------------------------------------------
 const $theory = document.querySelector(".theory");
 let $theoryContentClassList;
 
@@ -59,5 +62,13 @@ const swiper = new Swiper(".mySwiper", {
     },
 });
 
-//AOS fade in sections
+//--------------------------AOS fade in sections--------------------------------------------
 AOS.init();
+
+//--------------------------firebase get news-----------------------------------------------
+const colRef = collection(db, "News");
+
+getDocs(colRef)
+    .then((snapshot) => {
+        console.log(snapshot.docs)
+    })
