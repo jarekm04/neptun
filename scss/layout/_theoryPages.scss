@@ -76,16 +76,13 @@
   background-color: $color-lightGray;
   color: $color-darkGray;
   padding: 0 4rem;
-  margin-bottom: 3rem;
+  margin: 5rem 0;
 
   .content__title {
-    font-size: 6rem;
+    font-size: 3rem;
     text-align: center;
-    padding: 2rem 0;
+    padding: 1rem 0;
     letter-spacing: 0.1rem;
-    @include tablet {
-      font-size: 4.7rem;
-    }
   }
 
   .content__box {
@@ -104,22 +101,22 @@
       }
     }
     .box__headline {
-      font-size: 2.5rem;
+      font-size: 2rem;
       line-height: 3.5rem;
       margin-bottom: 1rem;
       padding-left: 1rem;
       @include tablet {
-        font-size: 2.2rem;
+        font-size: 1.8rem;
         line-height: 3rem;
       }
     }
 
     .box__text {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       line-height: 2.5rem;
       padding-bottom: 1rem;
       @include tablet {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         line-height: 2.2rem;
       }
     }

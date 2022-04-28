@@ -786,18 +786,13 @@ body {
   background-color: #e3e3e3;
   color: #2d2d2d;
   padding: 0 4rem;
-  margin-bottom: 3rem;
+  margin: 5rem 0;
 }
 .theory-content .content__title {
-  font-size: 6rem;
+  font-size: 3rem;
   text-align: center;
-  padding: 2rem 0;
+  padding: 1rem 0;
   letter-spacing: 0.1rem;
-}
-@media screen and (max-width: 1000px) {
-  .theory-content .content__title {
-    font-size: 4.7rem;
-  }
 }
 .theory-content .content__box {
   -moz-column-count: 2;
@@ -822,25 +817,25 @@ body {
   }
 }
 .theory-content .content__box .box__headline {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 3.5rem;
   margin-bottom: 1rem;
   padding-left: 1rem;
 }
 @media screen and (max-width: 1000px) {
   .theory-content .content__box .box__headline {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     line-height: 3rem;
   }
 }
 .theory-content .content__box .box__text {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2.5rem;
   padding-bottom: 1rem;
 }
 @media screen and (max-width: 1000px) {
   .theory-content .content__box .box__text {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     line-height: 2.2rem;
   }
 }
