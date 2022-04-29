@@ -4,6 +4,8 @@
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  scroll-margin-top: $nav-offset-top;
+  overflow: hidden;
 
   .container {
     height: 100%;
@@ -57,6 +59,7 @@
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
+  overflow: hidden;
 
   .container {
     height: 100%;
