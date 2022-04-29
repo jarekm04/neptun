@@ -104,12 +104,14 @@ function generateNewsAdmin(news) {
 
 function deleteNewsItem() {
     let $newsItems = document.querySelectorAll(".news-item button");
+
     $newsItems.forEach((item) => {
         item.addEventListener("click", (e) => {
             const docRef = doc(db, "News", e.target.dataset.id);
             if (e.target.dataset.id === docRef.id) {
                 deleteDoc(docRef)
                     .then(() => {
+                        alert(`Usunięto news nr: ${e.target.dataset.id}`)
                         window.location.reload();
                     })
                     .catch(err => {

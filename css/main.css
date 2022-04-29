@@ -301,6 +301,137 @@ body {
   padding-left: 0.5rem;
 }
 
+.aboutUs-1 {
+  height: 80vh;
+  background-image: url("../assets/IMG_6186compressed.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.aboutUs-1 .container {
+  height: 100%;
+  position: relative;
+}
+.aboutUs-1 .container .aboutUs-1__box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #222831;
+  padding: 3rem;
+  margin: 0 2rem;
+}
+.aboutUs-1 .container .aboutUs-1__box[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 0.9;
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs-1 .container .aboutUs-1__box {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs-1 .container .aboutUs-1__box {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem;
+  }
+}
+.aboutUs-1 .container .aboutUs-1__box .box__text {
+  font-size: 2rem;
+  line-height: 2.7rem;
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs-1 .container .aboutUs-1__box .box__text {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs-1 .container .aboutUs-1__box .box__text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+.aboutUs-2 {
+  height: 85vh;
+  background-image: url("../assets/kick-mirror-compressed.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+}
+.aboutUs-2 .container {
+  height: 100%;
+  position: relative;
+}
+.aboutUs-2 .container .aboutUs-2__box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #222831;
+  padding: 3rem;
+  margin: 0 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs-2 .container .aboutUs-2__box {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs-2 .container .aboutUs-2__box {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 1.5rem;
+  }
+}
+.aboutUs-2 .container .aboutUs-2__box[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 0.9;
+}
+.aboutUs-2 .container .aboutUs-2__box .box__title {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  text-align: center;
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs-2 .container .aboutUs-2__box .box__title {
+    font-size: 2.2rem;
+    line-height: 2.5rem;
+  }
+}
+.aboutUs-2 .container .aboutUs-2__box .box__list {
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+  padding-left: 0.5rem;
+}
+@media screen and (max-width: 1000px) {
+  .aboutUs-2 .container .aboutUs-2__box .box__list {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding-left: 2rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .aboutUs-2 .container .aboutUs-2__box .box__list {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
 .trainers {
   background-image: url("../assets/neptun-logo-cutted.jpg");
   background-size: cover;
