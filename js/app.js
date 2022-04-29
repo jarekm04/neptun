@@ -74,7 +74,7 @@ getDocs(colRef)
         snapshot.docs.forEach((doc) => {
             news.push({ ...doc.data(), id: doc.id })
         })
-        news.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+        news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         generateNews(news);
     })
     .catch(err => {
@@ -83,6 +83,7 @@ getDocs(colRef)
 
 function generateNews(news) {
     let newsHTML = '';
+
     for (let i = 0; i < 3; i++) {
         newsHTML += `
             <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">

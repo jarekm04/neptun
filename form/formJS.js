@@ -1,5 +1,5 @@
 import { db } from "../firebase.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import { collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const $form = document.querySelector("form");
 const $icon = document.getElementById("icon");
@@ -22,6 +22,7 @@ $isPopover.addEventListener("change", () => {
     }
 })
 
+//-----------form validation and sending data to firebase--------------------------------------------------
 $form.addEventListener("submit" , (e) => {
     e.preventDefault();
 
@@ -61,6 +62,60 @@ $form.addEventListener("submit" , (e) => {
     })
         .then(() => {
             window.alert("Wysłano formularz z nowym newsem!");
-            location.reload();
+            window.location.reload();
         })
 });
+
+//------------fetching data from firebase with possible to delete------------------------------------
+const colRef = collection(db, "News");
+
+getDocs(colRef)
+    .then((snapshot) => {
+        let news = [];
+        snapshot.docs.forEach((doc) => {
+            news.push({ ...doc.data(), id: doc.id })
+        })
+        news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        generateNewsAdmin(news);
+    })
+    .catch(err => {
+        console.log(err.message);
+    });
+
+function generateNewsAdmin(news) {
+    let newsHTML = '';
+
+    news.forEach((item) => {
+       newsHTML += `
+            <div class="col-6 my-2 news-item">
+                <div class="border border-secondary p-3">
+                    <h5>Tytuł newsa: ${item.title}</h5>
+                    <h6>Data dodania newsa: ${item.date}</h6>
+                    <p>Nr newsa: ${item.id}</p>
+                    <button class="btn btn-primary deleteNews" data-id="${item.id}">Usuń news z bazy</button>
+                </div>
+            </div>
+       `
+    });
+
+    document.querySelector(".news-box").innerHTML = newsHTML;
+    deleteNewsItem();
+}
+
+function deleteNewsItem() {
+    let $newsItems = document.querySelectorAll(".news-item button");
+    $newsItems.forEach((item) => {
+        item.addEventListener("click", (e) => {
+            const docRef = doc(db, "News", e.target.dataset.id);
+            if (e.target.dataset.id === docRef.id) {
+                deleteDoc(docRef)
+                    .then(() => {
+                        window.location.reload();
+                    })
+                    .catch(err => {
+                        console.log(err.message);
+                    })
+            }
+        });
+    });
+}
