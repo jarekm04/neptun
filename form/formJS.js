@@ -3,6 +3,7 @@ import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.4.0/fir
 
 const $form = document.querySelector("form");
 const $icon = document.getElementById("icon");
+const $title = document.getElementById("title");
 const $name = document.getElementById("name");
 const $newsContent = document.getElementById("newsInfo");
 const $isPopover = document.getElementById("popoverNews");
@@ -23,6 +24,11 @@ $isPopover.addEventListener("change", () => {
 
 $form.addEventListener("submit" , (e) => {
     e.preventDefault();
+
+    if (!$title.value) {
+        $title.focus();
+        return;
+    }
 
     if (!$name.value) {
         $name.focus();
@@ -47,6 +53,7 @@ $form.addEventListener("submit" , (e) => {
     addDoc(collection(db, "News"), {
         date: new Date().toLocaleDateString().split(".").reverse().join("."),
         icon: $icon.value,
+        title: $title.value.toUpperCase(),
         name: $name.value.charAt(0).toUpperCase() + $name.value.slice(1),
         newsContent: $newsContent.value.charAt(0).toUpperCase() + $newsContent.value.slice(1),
         isPopover: $isPopover.value,

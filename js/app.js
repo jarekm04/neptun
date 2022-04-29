@@ -67,11 +67,7 @@ AOS.init();
 
 //--------------------------firebase get news-----------------------------------------------
 const colRef = collection(db, "News");
-// let newArr = arr.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
 
-const $newsSection = document.querySelector(".news__section");
-const newArticle = document.createElement("article");
-console.log($newsSection)
 getDocs(colRef)
     .then((snapshot) => {
         let news = [];
@@ -88,20 +84,18 @@ getDocs(colRef)
 function generateNews(news) {
     let newsHTML = '';
     for (let i = 0; i < 3; i++) {
-        newsHTML = `
+        newsHTML += `
             <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
                 <div class="article__info">
-                    <div class="info__date">${news[i].date}</div>
-                    <i class="fa-solid fa-circle-info info__icon"></i>
+                    <div class="info__date">${news[i].date.slice(5, 11).split('.').reverse().join('.')}</div>
+                    <i class="fa-solid info__icon ${news[i].icon === "triangle" ? "fa-triangle-exclamation" : "fa-circle-info"}"></i>
                 </div>
-                <h3 class="article__title">relacja z zawodów</h3>
-                <p class="article__author">przez Jerry Maguire</p>
-                <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fugit incidunt ipsa
-                    ipsam modi officiis pariatur quasi sint sit tempore? Vestibulum nec est vitae felis dapibus blandit ac
-                    eget nunc. Donec mi justo, pharetra vel condimentum ac, facilisis non orci. Morbi non est vel purus
-                    convallis bibendum rutrum in lectus. Vestibulum nec est vitae felis dapibus blandit ac eget nunc.</p>
+                <h3 class="article__title">${news[i].title}</h3>
+                <p class="article__author">przez ${news[i].name}</p>
+                <p class="article__text">${news[i].newsContent}</p>
                 <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
     }
+    document.querySelector(".news__section").innerHTML = newsHTML;
 }

@@ -256,7 +256,7 @@ body {
   padding: 0 2rem 0.5rem 0;
 }
 .news .news__section .section__article .article__info .info__date {
-  width: 7rem;
+  width: 6rem;
   height: 3rem;
   display: flex;
   justify-content: center;
