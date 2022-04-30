@@ -1,11 +1,16 @@
-.aboutUs-1 {
-  height: 80vh;
+.aboutUs {
+  height: 85vh;
   background-image: url("../assets/IMG_6186compressed.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   scroll-margin-top: $nav-offset-top;
-  overflow: hidden;
+  @include mobile {
+    height: 90vh;
+  }
+  @media (max-width: 500px) {
+    height: 120vh;
+  }
 
   .container {
     height: 100%;
@@ -15,7 +20,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 40%;
+      width: 30%;
       height: 100%;
       display: flex;
       align-items: center;
@@ -26,11 +31,10 @@
         opacity: 0.9;
       }
       @include tablet {
-        width: 55%;
+        width: 40%;
       }
       @include mobile {
-        top: auto;
-        bottom: 0;
+        top: 5%;
         width: 100%;
         height: auto;
         margin: 0;
@@ -38,38 +42,19 @@
       }
 
       .box__text {
-        font-size: 2rem;
-        line-height: 2.7rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
         @include tablet {
-          font-size: 1.6rem;
-          line-height: 2.4rem;
-        }
-        @include mobile {
           font-size: 1.4rem;
           line-height: 2rem;
         }
       }
     }
-  }
-}
-
-.aboutUs-2 {
-  height: 85vh;
-  background-image: url("../assets/kick-mirror-compressed.jpg");
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  overflow: hidden;
-
-  .container {
-    height: 100%;
-    position: relative;
-
     .aboutUs-2__box {
       position: absolute;
       top: 0;
-      right: 0;
-      width: 40%;
+      left: 32%;
+      width: 30%;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -80,11 +65,13 @@
       margin: 0 2rem;
 
       @include tablet {
-        width: 55%;
+        left: 42%;
+        width: 45%;
       }
       @include mobile {
         top: auto;
-        bottom: 0;
+        left: 0;
+        bottom: 5%;
         width: 100%;
         height: auto;
         margin: 0;
@@ -96,27 +83,26 @@
       }
 
       .box__title {
-        font-size: 2.5rem;
-        line-height: 3.5rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
         text-align: center;
         @include tablet {
-          font-size: 2.2rem;
-          line-height: 2.5rem;
-        }
-      }
-      .box__list {
-        font-size: 1.8rem;
-        line-height: 2.4rem;
-        padding-left: 0.5rem;
-        @include tablet {
-          font-size: 1.6rem;
-          line-height: 2.4rem;
-          padding-left: 2rem;
-        }
-        @include mobile {
           font-size: 1.4rem;
           line-height: 2rem;
         }
+      }
+      .box__list {
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        padding-left: 0.5rem;
+        @include tablet {
+          font-size: 1.4rem;
+          line-height: 2rem;
+        }
+        //@include mobile {
+        //  font-size: 1.4rem;
+        //  line-height: 2rem;
+        //}
       }
     }
   }

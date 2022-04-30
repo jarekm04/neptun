@@ -157,6 +157,7 @@ body {
 }
 
 .homePage {
+  height: 100vh;
   position: relative;
   overflow: hidden;
   background-color: #000;
@@ -226,9 +227,15 @@ body {
     font-size: 1.6rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .homePage .homepage__textBox .textBox__btn {
+    width: 19rem;
+    font-size: 1.4rem;
+  }
+}
 
 .news {
-  padding: 3rem 2rem;
+  padding: 5rem 2rem;
   background-color: #e3e3e3;
   color: #000;
   scroll-margin-top: 99px;
@@ -301,24 +308,33 @@ body {
   padding-left: 0.5rem;
 }
 
-.aboutUs-1 {
-  height: 80vh;
+.aboutUs {
+  height: 85vh;
   background-image: url("../assets/IMG_6186compressed.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   scroll-margin-top: 99px;
-  overflow: hidden;
 }
-.aboutUs-1 .container {
+@media screen and (max-width: 600px) {
+  .aboutUs {
+    height: 90vh;
+  }
+}
+@media (max-width: 500px) {
+  .aboutUs {
+    height: 120vh;
+  }
+}
+.aboutUs .container {
   height: 100%;
   position: relative;
 }
-.aboutUs-1 .container .aboutUs-1__box {
+.aboutUs .container .aboutUs-1__box {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%;
+  width: 30%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -326,58 +342,38 @@ body {
   padding: 3rem;
   margin: 0 2rem;
 }
-.aboutUs-1 .container .aboutUs-1__box[data-aos^=fade][data-aos^=fade].aos-animate {
+.aboutUs .container .aboutUs-1__box[data-aos^=fade][data-aos^=fade].aos-animate {
   opacity: 0.9;
 }
 @media screen and (max-width: 1000px) {
-  .aboutUs-1 .container .aboutUs-1__box {
-    width: 55%;
+  .aboutUs .container .aboutUs-1__box {
+    width: 40%;
   }
 }
 @media screen and (max-width: 600px) {
-  .aboutUs-1 .container .aboutUs-1__box {
-    top: auto;
-    bottom: 0;
+  .aboutUs .container .aboutUs-1__box {
+    top: 5%;
     width: 100%;
     height: auto;
     margin: 0;
     padding: 1.5rem;
   }
 }
-.aboutUs-1 .container .aboutUs-1__box .box__text {
-  font-size: 2rem;
-  line-height: 2.7rem;
+.aboutUs .container .aboutUs-1__box .box__text {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
 }
 @media screen and (max-width: 1000px) {
-  .aboutUs-1 .container .aboutUs-1__box .box__text {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .aboutUs-1 .container .aboutUs-1__box .box__text {
+  .aboutUs .container .aboutUs-1__box .box__text {
     font-size: 1.4rem;
     line-height: 2rem;
   }
 }
-
-.aboutUs-2 {
-  height: 85vh;
-  background-image: url("../assets/kick-mirror-compressed.jpg");
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-.aboutUs-2 .container {
-  height: 100%;
-  position: relative;
-}
-.aboutUs-2 .container .aboutUs-2__box {
+.aboutUs .container .aboutUs-2__box {
   position: absolute;
   top: 0;
-  right: 0;
-  width: 40%;
+  left: 32%;
+  width: 30%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -388,48 +384,43 @@ body {
   margin: 0 2rem;
 }
 @media screen and (max-width: 1000px) {
-  .aboutUs-2 .container .aboutUs-2__box {
-    width: 55%;
+  .aboutUs .container .aboutUs-2__box {
+    left: 42%;
+    width: 45%;
   }
 }
 @media screen and (max-width: 600px) {
-  .aboutUs-2 .container .aboutUs-2__box {
+  .aboutUs .container .aboutUs-2__box {
     top: auto;
-    bottom: 0;
+    left: 0;
+    bottom: 5%;
     width: 100%;
     height: auto;
     margin: 0;
     padding: 1.5rem;
   }
 }
-.aboutUs-2 .container .aboutUs-2__box[data-aos^=fade][data-aos^=fade].aos-animate {
+.aboutUs .container .aboutUs-2__box[data-aos^=fade][data-aos^=fade].aos-animate {
   opacity: 0.9;
 }
-.aboutUs-2 .container .aboutUs-2__box .box__title {
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+.aboutUs .container .aboutUs-2__box .box__title {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  .aboutUs-2 .container .aboutUs-2__box .box__title {
-    font-size: 2.2rem;
-    line-height: 2.5rem;
+  .aboutUs .container .aboutUs-2__box .box__title {
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
 }
-.aboutUs-2 .container .aboutUs-2__box .box__list {
-  font-size: 1.8rem;
+.aboutUs .container .aboutUs-2__box .box__list {
+  font-size: 1.6rem;
   line-height: 2.4rem;
   padding-left: 0.5rem;
 }
 @media screen and (max-width: 1000px) {
-  .aboutUs-2 .container .aboutUs-2__box .box__list {
-    font-size: 1.6rem;
-    line-height: 2.4rem;
-    padding-left: 2rem;
-  }
-}
-@media screen and (max-width: 600px) {
-  .aboutUs-2 .container .aboutUs-2__box .box__list {
+  .aboutUs .container .aboutUs-2__box .box__list {
     font-size: 1.4rem;
     line-height: 2rem;
   }
@@ -632,7 +623,7 @@ body {
   }
 }
 .theory .swiper .swiper-button-prev {
-  left: 38%;
+  left: 10%;
   top: 35%;
   right: auto;
   transition: 0.2s ease-in-out;
@@ -640,34 +631,14 @@ body {
 .theory .swiper .swiper-button-prev:hover {
   color: #007aff;
 }
-@media screen and (max-width: 1000px) {
-  .theory .swiper .swiper-button-prev {
-    left: 30%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .theory .swiper .swiper-button-prev {
-    left: 15%;
-  }
-}
 .theory .swiper .swiper-button-next {
-  right: 38%;
+  right: 10%;
   top: 35%;
   left: auto;
   transition: 0.2s ease-in-out;
 }
 .theory .swiper .swiper-button-next:hover {
   color: #007aff;
-}
-@media screen and (max-width: 1000px) {
-  .theory .swiper .swiper-button-next {
-    right: 30%;
-  }
-}
-@media screen and (max-width: 600px) {
-  .theory .swiper .swiper-button-next {
-    right: 15%;
-  }
 }
 
 .schedule {

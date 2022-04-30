@@ -1,4 +1,5 @@
 .homePage {
+  height: 100vh;
   position: relative;
   overflow: hidden;
   background-color: $color-black;
@@ -43,6 +44,10 @@
 
     .textBox__btn {
       @include buttonStyle;
+      @include mobile {
+        width: 19rem;
+        font-size: 1.4rem;
+      }
     }
   }
 }
