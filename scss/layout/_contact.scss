@@ -13,9 +13,16 @@
     }
 
     .contact__details {
-      margin-top: 11rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+      flex-shrink: 1;
+      width: 50%;
       padding-right: 1rem;
       @include tablet {
+        align-items: flex-start;
+        width: auto;
         margin-top: 2rem;
         padding-right: 0;
       }
@@ -32,6 +39,7 @@
         }
 
         .item__data {
+          min-width: 40rem;
           font-size: 2rem;
           line-height: 2.5rem;
           letter-spacing: 0.1rem;
@@ -39,6 +47,7 @@
           text-decoration: none;
           transition: .2s ease-in-out;
           @include tablet {
+            min-width: auto;
             font-size: 1.6rem;
             line-height: 2.2rem;
           }
@@ -62,7 +71,7 @@
       }
 
       iframe {
-        width: 60rem;
+        width: 55rem;
         height: 45rem;
         @include tablet {
           width: 100%;
