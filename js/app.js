@@ -87,7 +87,6 @@ function generateNews(news) {
 
     if (news.length > 3) {
         for (let i = 0; i < 3; i++) {
-            console.log(news[0].newsContent.length > 500 ? news[0].newsContent.substring(0, 500) + "..." : null);
             newsHTML += `
             <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
                 <div class="article__info">
@@ -117,6 +116,12 @@ function generateNews(news) {
         `
         })
     }
-
     document.querySelector(".news__section").innerHTML = newsHTML;
 }
+
+//-----------------   close read more popup   ---------------------------------------
+const newsModal = document.querySelector(".news__modal");
+document.querySelector(".exit-icon").addEventListener("click", () => {
+    newsModal.classList.remove("isActive");
+    newsModal.classList.add("isHidden");
+});

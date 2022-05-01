@@ -253,7 +253,6 @@ body {
 }
 .news .news__section .section__article {
   width: 35rem;
-  height: 40rem;
   padding: 1rem 0.8rem;
   background-color: #fff;
 }
@@ -293,7 +292,7 @@ body {
 }
 .news .news__section .section__article .article__more {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
   font-size: 1.6rem;
   font-weight: bold;
@@ -307,6 +306,67 @@ body {
   display: flex;
   justify-content: center;
   padding-left: 0.5rem;
+}
+.news .news__modal.isHidden {
+  display: none;
+}
+.news .news__modal.isActive {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.news .news__modal .modal__article {
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  transform: translate(-12%, -50%);
+  padding: 2rem;
+  background-color: #e3e3e3;
+}
+.news .news__modal .modal__article .article__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem 0.5rem 0;
+}
+.news .news__modal .modal__article .article__info .info__date {
+  width: 6rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  background-color: #2b5379;
+  color: #fff;
+  align-self: flex-start;
+}
+.news .news__modal .modal__article .article__info .exit-icon {
+  font-size: 5rem;
+  color: #222831;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+.news .news__modal .modal__article .article__info .exit-icon:hover {
+  color: #666666;
+}
+.news .news__modal .modal__article .article__title {
+  font-size: 1.8rem;
+  margin-bottom: 0.2rem;
+  text-transform: uppercase;
+}
+.news .news__modal .modal__article .article__author {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.news .news__modal .modal__article .article__text {
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
 }
 
 .aboutUs {
