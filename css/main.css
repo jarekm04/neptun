@@ -252,7 +252,8 @@ body {
   gap: 2rem;
 }
 .news .news__section .section__article {
-  width: 350px;
+  width: 35rem;
+  height: 40rem;
   padding: 1rem 0.8rem;
   background-color: #fff;
 }

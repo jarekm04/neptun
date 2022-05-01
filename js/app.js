@@ -87,6 +87,7 @@ function generateNews(news) {
 
     if (news.length > 3) {
         for (let i = 0; i < 3; i++) {
+            console.log(news[0].newsContent.length > 500 ? news[0].newsContent.substring(0, 500) + "..." : null);
             newsHTML += `
             <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
                 <div class="article__info">
@@ -95,8 +96,8 @@ function generateNews(news) {
                 </div>
                 <h3 class="article__title">${news[i].title}</h3>
                 <p class="article__author">przez ${news[i].name}</p>
-                <p class="article__text">${news[i].newsContent}</p>
-                <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
+                <p class="article__text">${news[i].newsContent.length > 500 ? news[i].newsContent.substring(0, 500) + "..." : news[i].newsContent}</p>
+                <a href="#" class="article__more" style="${news[i].newsContent.length < 500 ? "display: none" : null}">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
         }
@@ -110,7 +111,7 @@ function generateNews(news) {
                 </div>
                 <h3 class="article__title">${item.title}</h3>
                 <p class="article__author">przez ${item.name}</p>
-                <p class="article__text">${item.newsContent}</p>
+                <p class="article__text">${item.newsContent.length > 500 ? item.newsContent.substring(0, 500) + "..." : item.newsContent}</p>
                 <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
