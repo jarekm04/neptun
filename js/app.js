@@ -74,6 +74,7 @@ getDocs(colRef)
         snapshot.docs.forEach((doc) => {
             news.push({ ...doc.data(), id: doc.id })
         })
+        news = news.filter((item) => item.isPopover === "no");
         news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         generateNews(news);
     })
@@ -84,8 +85,9 @@ getDocs(colRef)
 function generateNews(news) {
     let newsHTML = '';
 
-    for (let i = 0; i < 3; i++) {
-        newsHTML += `
+    if (news.length > 3) {
+        for (let i = 0; i < 3; i++) {
+            newsHTML += `
             <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
                 <div class="article__info">
                     <div class="info__date">${news[i].date.slice(5, 11).split('.').reverse().join('.')}</div>
@@ -97,6 +99,23 @@ function generateNews(news) {
                 <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
+        }
+    } else {
+        news.forEach((item) => {
+            newsHTML += `
+            <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
+                <div class="article__info">
+                    <div class="info__date">${item.date.slice(5, 11).split('.').reverse().join('.')}</div>
+                    <i class="fa-solid info__icon ${item.icon === "triangle" ? "fa-triangle-exclamation" : "fa-circle-info"}"></i>
+                </div>
+                <h3 class="article__title">${item.title}</h3>
+                <p class="article__author">przez ${item.name}</p>
+                <p class="article__text">${item.newsContent}</p>
+                <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
+            </article>
+        `
+        })
     }
+
     document.querySelector(".news__section").innerHTML = newsHTML;
 }
