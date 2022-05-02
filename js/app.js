@@ -77,6 +77,7 @@ getDocs(colRef)
         news = news.filter((item) => item.isPopover === "no");
         news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         generateNews(news);
+        getFullSizeNews(news);
     })
     .catch(err => {
         console.log(err.message);
@@ -96,7 +97,7 @@ function generateNews(news) {
                 <h3 class="article__title">${news[i].title}</h3>
                 <p class="article__author">przez ${news[i].name}</p>
                 <p class="article__text">${news[i].newsContent.length > 500 ? news[i].newsContent.substring(0, 500) + "..." : news[i].newsContent}</p>
-                <a href="#" class="article__more" style="${news[i].newsContent.length < 500 ? "display: none" : null}">Czytaj więcej<span class="material-icons">east</span></a>
+                <button class="article__more" style="${news[i].newsContent.length < 500 ? "display: none" : null}">Czytaj więcej<span class="material-icons">east</span></button>
             </article>
         `
         }
@@ -111,7 +112,7 @@ function generateNews(news) {
                 <h3 class="article__title">${item.title}</h3>
                 <p class="article__author">przez ${item.name}</p>
                 <p class="article__text">${item.newsContent.length > 500 ? item.newsContent.substring(0, 500) + "..." : item.newsContent}</p>
-                <a href="#" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
+                <a href="/" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
         })
@@ -119,9 +120,37 @@ function generateNews(news) {
     document.querySelector(".news__section").innerHTML = newsHTML;
 }
 
-//-----------------   close read more popup   ---------------------------------------
-const newsModal = document.querySelector(".news__modal");
+//-----------------   close read-more popup   ---------------------------------------
+const $newsModal = document.querySelector(".news__modal");
 document.querySelector(".exit-icon").addEventListener("click", () => {
-    newsModal.classList.remove("isActive");
-    newsModal.classList.add("isHidden");
+    $newsModal.classList.remove("isActive");
+    $newsModal.classList.add("isHidden");
 });
+
+//----------------  show full size clicked news -----------------------------------
+function getFullSizeNews(news) {
+    const $readMoreBtns = document.querySelectorAll(".article__more");
+
+    $readMoreBtns.forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+            const currentArticle = e.target.parentElement;
+            console.log(currentArticle.children[0].children[0].textContent)
+            console.log(currentArticle.children[1].textContent)
+            console.log(currentArticle.children[2].textContent)
+            console.log(currentArticle.children[3].textContent)
+            // $newsModal.innerHTML = `
+            //     <article class="modal__article">
+            //         <div class="article__info">
+            //             <div class="info__date"></div>
+            //             <i class="fa-solid fa-circle-xmark exit-icon"></i>
+            //         </div>
+            //         <h3 class="article__title"></h3>
+            //         <p class="article__author"></p>
+            //         <p class="article__text"></p>
+            //     </article>
+            // `;
+            // $newsModal.classList.remove("isHidden");
+            // $newsModal.classList.add("isActive");
+        })
+    })
+}
