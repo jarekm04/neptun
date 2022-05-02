@@ -89,15 +89,15 @@ function generateNews(news) {
     if (news.length > 3) {
         for (let i = 0; i < 3; i++) {
             newsHTML += `
-            <article class="section__article" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
+            <article class="section__article" data-id="${news[i].id}" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="0">
                 <div class="article__info">
                     <div class="info__date">${news[i].date.slice(5, 11).split('.').reverse().join('.')}</div>
                     <i class="fa-solid info__icon ${news[i].icon === "triangle" ? "fa-triangle-exclamation" : "fa-circle-info"}"></i>
                 </div>
                 <h3 class="article__title">${news[i].title}</h3>
                 <p class="article__author">przez ${news[i].name}</p>
-                <p class="article__text">${news[i].newsContent.length > 500 ? news[i].newsContent.substring(0, 500) + "..." : news[i].newsContent}</p>
-                <button class="article__more" style="${news[i].newsContent.length < 500 ? "display: none" : null}">Czytaj więcej<span class="material-icons">east</span></button>
+                <p class="article__text">${news[i].newsContent.length > 400 ? news[i].newsContent.substring(0, 400) + "..." : news[i].newsContent}</p>
+                <button class="article__more" style="${news[i].newsContent.length < 400 ? "display: none" : null}">Czytaj więcej<span class="material-icons">east</span></button>
             </article>
         `
         }
@@ -111,7 +111,7 @@ function generateNews(news) {
                 </div>
                 <h3 class="article__title">${item.title}</h3>
                 <p class="article__author">przez ${item.name}</p>
-                <p class="article__text">${item.newsContent.length > 500 ? item.newsContent.substring(0, 500) + "..." : item.newsContent}</p>
+                <p class="article__text">${item.newsContent.length > 400 ? item.newsContent.substring(0, 400) + "..." : item.newsContent}</p>
                 <a href="/" class="article__more">Czytaj więcej<span class="material-icons">east</span></a>
             </article>
         `
@@ -122,6 +122,12 @@ function generateNews(news) {
 
 //-----------------   close read-more popup   ---------------------------------------
 const $newsModal = document.querySelector(".news__modal");
+const $modalArticle = document.querySelector(".modal__article");
+const $modalDate = $modalArticle.children[0].children[0];
+const $modalTitle = $modalArticle.children[1];
+const $modalName = $modalArticle.children[2];
+const $modalText = $modalArticle.children[3];
+
 document.querySelector(".exit-icon").addEventListener("click", () => {
     $newsModal.classList.remove("isActive");
     $newsModal.classList.add("isHidden");
@@ -133,24 +139,13 @@ function getFullSizeNews(news) {
 
     $readMoreBtns.forEach((btn) => {
         btn.addEventListener("click", (e) => {
-            const currentArticle = e.target.parentElement;
-            console.log(currentArticle.children[0].children[0].textContent)
-            console.log(currentArticle.children[1].textContent)
-            console.log(currentArticle.children[2].textContent)
-            console.log(currentArticle.children[3].textContent)
-            // $newsModal.innerHTML = `
-            //     <article class="modal__article">
-            //         <div class="article__info">
-            //             <div class="info__date"></div>
-            //             <i class="fa-solid fa-circle-xmark exit-icon"></i>
-            //         </div>
-            //         <h3 class="article__title"></h3>
-            //         <p class="article__author"></p>
-            //         <p class="article__text"></p>
-            //     </article>
-            // `;
-            // $newsModal.classList.remove("isHidden");
-            // $newsModal.classList.add("isActive");
+            const currentArticleID = e.target.parentElement.dataset.id;
+
+            news.forEach((item) => {
+                if (item.id === currentArticleID) {
+                    console.log("to samo")
+                }
+            })
         })
     })
 }
