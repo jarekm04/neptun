@@ -123,3 +123,28 @@ function getFullSizeNews(news) {
         })
     })
 }
+
+//---------------------------------------------------------------------------------------------
+const $googleMap = document.querySelector(".contact__map");
+const $contactDetailsBox = document.querySelector(".contact__details");
+const $divToClone = document.querySelector(".details__item");
+if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    $googleMap.style.display = "none";
+
+    const clone = $divToClone.cloneNode(true);
+    clone.dataset.aosDelay = "400";
+    clone.innerHTML = `
+            <p class="item__data">
+                    <i class="fa-solid fa-map-location-dot item__icon"></i>
+                    Pokaż miejsce na Google Maps
+                </p>
+    `;
+    $contactDetailsBox.appendChild(clone);
+
+    clone.addEventListener("click", () => {
+        $googleMap.style.display = "block";
+    });
+
+} else {
+    $googleMap.style.display = "block";
+}

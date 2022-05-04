@@ -819,11 +819,11 @@ body {
 }
 .contact .container {
   display: flex;
+  min-height: 40rem;
 }
 @media screen and (max-width: 1000px) {
   .contact .container {
     flex-direction: column;
-    padding: 1rem 3rem;
     align-items: center;
   }
 }
@@ -888,12 +888,13 @@ body {
 }
 .contact .container .contact__map {
   margin-top: 2rem;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 @media screen and (max-width: 1000px) {
   .contact .container .contact__map {
     width: 100%;
     margin-top: 0;
+    margin-right: 0;
   }
 }
 .contact .container .contact__map iframe {

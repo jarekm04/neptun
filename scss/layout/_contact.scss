@@ -4,9 +4,9 @@
   overflow-x: clip;
   .container {
     display: flex;
+    min-height: 40rem;
     @include tablet {
       flex-direction: column;
-      padding: 1rem 3rem;
       align-items: center;
     }
 
@@ -70,10 +70,11 @@
 
     .contact__map {
       margin-top: 2rem;
-      margin-right: 1rem;
+      margin-right: 2rem;
       @include tablet {
         width: 100%;
         margin-top: 0;
+        margin-right: 0;
       }
 
       iframe {
