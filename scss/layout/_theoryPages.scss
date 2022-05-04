@@ -1,82 +1,8 @@
-.theory.theoryPages {
-  --swiper-navigation-size: 3rem;
-  height: 25rem;
-  padding: 13rem 0 5rem 0;
-  background-color: $color-lightGray;
-
-  .swiper {
-    .swiper-slide {
-      width: 17rem;
-      height: 10rem;
-
-      .theory__item {
-        width: 17rem;
-        height: 10rem;
-        background-color: $color-darkGray;
-
-        .item__title {
-          font-size: 1.4rem;
-        }
-
-        .item__anchor {
-          height: 3.4rem;
-          font-size: 1.4rem;
-          padding: 0 2rem;
-        }
-      }
-    }
-
-    .swiper-pagination {
-      .swiper-pagination-bullet {
-        background-color: $color-black;
-      }
-    }
-
-    .swiper-button-prev {
-      left: 43%;
-      top: 35%;
-      right: auto;
-      color: $color-arrowHover;
-      transition: .2s ease-in-out;
-
-      &:hover {
-        color: $color-white;
-      }
-
-      @include tablet {
-        left: 34%;
-      }
-      @include mobile {
-        left: 15%;
-      }
-    }
-
-    .swiper-button-next {
-      right: 43%;
-      top: 35%;
-      left: auto;
-      color: $color-arrowHover;
-      transition: .2s ease-in-out;
-
-      &:hover {
-        color: $color-white;
-      }
-
-      @include tablet {
-        right: 34%;
-      }
-      @include mobile {
-        right: 15%;
-      }
-    }
-  }
-}
-
 .theory-content {
   background-color: $color-lightGray;
   color: $color-darkGray;
   padding: 0 4rem;
-  margin: 5rem 0;
+  margin: 10rem 0 5rem 0;
 
   .content__title {
     font-size: 3rem;
@@ -90,15 +16,6 @@
     column-gap: 4rem;
     @include tablet {
       column-count: auto;
-    }
-
-    &:first-of-type:first-letter {
-      font-size: 4rem;
-      font-weight: bold;
-      font-family: Serif;
-      @include tablet {
-        font-size: 3.5rem;
-      }
     }
 
     .box__headline {

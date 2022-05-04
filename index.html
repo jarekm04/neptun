@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Neptun</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="assets/site.webmanifest">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
           rel="stylesheet">
@@ -18,7 +22,7 @@
 
 <header class="header">
     <div class="container">
-        <section class="header-box">
+        <nav class="header-box">
             <a href="#homePageID" class="header__logo">KSW NEPTUN</a>
             <ul class="header__menu">
                 <li>
@@ -41,7 +45,7 @@
                 </li>
             </ul>
             <span class="material-icons hamburger">menu</span>
-        </section>
+        </nav>
     </div>
 </header>
 
@@ -50,7 +54,7 @@
            loop></video>
     <div class="homepage__textBox">
         <h1 class="textBox__title">sztuka walki / sport / samoobrona</h1>
-        <a href="./assets/Karta%20członkowska%20Neptun%20Gdańsk%20RODO.pdf" class="textBox__btn">POBIERZ KARTĘ
+        <a href="./assets/Karta%20członkowska%20Neptun%20Gdańsk%20RODO.pdf" target="_blank" class="textBox__btn">POBIERZ KARTĘ
             CZŁONKOWSKĄ</a>
     </div>
 </section>
@@ -76,7 +80,7 @@
 <section class="aboutUs" id="aboutUsID">
     <div class="container">
         <div class="aboutUs-1__box" data-aos="fade-left">
-            <p class="box__text">Historia Neptuna Gdańsk sięga 2010 roku kiedy grupa pasjonatów sztuk walki postanowiła stworzyć miejsce gdzie mogliby ćwiczyć Taekwon-do i inne style zgodnie ze swoimi wzorcami. Szybko z jednej grupy ćwiczących wyłania się osobna gdzie ćwiczą wyłącznie dzieci. z biegiem lat w Klubie pojawiają się czarne pasy oraz coraz więcej istotnych osiągnięć najpierw na arenie wojewódzkiej a następnie ogólnokrajowej. Obecnie zajęcia prowadzone są przez licencjonowanych instruktorów Polskiego Związku Taekwon-do. Treningi Taekwon-do ITF są rozbudowywane o boks i elementy KAPAPu.	</p>
+            <p class="box__text">Historia Neptuna Gdańsk sięga 2010 roku kiedy grupa pasjonatów sztuk walki postanowiła stworzyć miejsce gdzie mogliby ćwiczyć Taekwondo i inne style zgodnie ze swoimi wzorcami. Szybko z jednej grupy ćwiczących wyłania się osobna gdzie ćwiczą wyłącznie dzieci. z biegiem lat w Klubie pojawiają się czarne pasy oraz coraz więcej istotnych osiągnięć najpierw na arenie wojewódzkiej a następnie ogólnokrajowej. Obecnie zajęcia prowadzone są przez licencjonowanych instruktorów Polskiego Związku Taekwondo. Treningi Taekwondo ITF są rozbudowywane o boks i elementy KAPAPu.	</p>
         </div>
         <div class="aboutUs-2__box" data-aos="fade-right" data-aos-delay="800">
             <h4 class="box__title">DZIĘKI TRENINGOM W "NEPTUN" GDAŃSK MASZ ZAPEWNIONE:</h4>
@@ -101,11 +105,9 @@
             <div class="trainer__overlay trainer__overlay--blur">
                 <h2 class="trainer__title">Jakub Tryzno</h2>
                 <p class="trainer__description">V dan - trener II klasy Taekwondo ITF oraz instruktor KAPAP. Trenuje
-                    nieprzerwanie od końca lat 90-tych zdobywając przez ten czas doświadczenie zawodnicze oraz
+                    nieprzerwanie<br>od końca lat 90-tych zdobywając przez ten czas doświadczenie zawodnicze oraz
                     instruktorskie. Trenował również inne sporty i systemy walk. Ostatecznie w roku 2010 zakłada KSW
-                    NEPTUN
-                    Gdańsk. Jest medalistą turniejów międzynarodowych oraz ogólnopolskich różnej rangi, w tym m.in.
-                    Mistrzostw Polski. Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej.</p>
+                    NEPTUN Gdańsk.<br>Jest medalistą turniejów międzynarodowych oraz ogólnopolskich różnej rangi, w tym m.in. Mistrzostw Polski.<br>Prowadzi zajęcia w grupie dziecięcej, starszej i zaawansowanej.</p>
             </div>
         </div>
         <div class="trainers__trainer" data-aos="fade-up" data-aos-offset="-100" data-aos-delay="100">
@@ -131,14 +133,14 @@
             <img class="trainer__photo" src="assets/2blazej.png" alt="blazej">
             <div class="trainer__overlay trainer__overlay--blur">
                 <h2 class="trainer__title">Błażej Czaja</h2>
-                <p class="trainer__description">I dan - instruktor TAEKWON-DO ITF. Trenuje od 1996 r. Dzieli się swoim
+                <p class="trainer__description">I dan - instruktor Taekwondo ITF. Trenuje od 1996 r. Dzieli się swoim
                     wieloletnim doświadczeniem wspomagając trenerów w trakcie prowadzonych zajęć.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="theory" id="theoryID">
+<section class="theory" id="theoryID" data-aos="fade-up">
     <div class="swiper mySwiper" data-aos="fade-up" data-aos-delay="0">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
@@ -279,9 +281,9 @@
             </div>
         </div>
         <div class="contact__map" data-aos="fade-left">
-<!--            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.4380487897356!2d18.65443961587855!3d54.402240180213866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd0ca9f15b81c9%3A0x473740b2b7743cf2!2sKlub%20Sztuk%20Walki%20%22NEPTUN%22%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1650620766105!5m2!1spl!2spl"-->
-<!--                    style="border:0;" allowfullscreen="" loading="lazy"-->
-<!--                    referrerpolicy="no-referrer-when-downgrade"></iframe>-->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2322.4380487897356!2d18.65443961587855!3d54.402240180213866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fd0ca9f15b81c9%3A0x473740b2b7743cf2!2sKlub%20Sztuk%20Walki%20%22NEPTUN%22%20Gda%C5%84sk!5e0!3m2!1spl!2spl!4v1650620766105!5m2!1spl!2spl"
+                    style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </section>

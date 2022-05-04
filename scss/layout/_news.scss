@@ -20,10 +20,12 @@
       width: 35rem;
       padding: 1rem 0.8rem;
       background-color: $color-white;
+      position: relative;
 
       .article__info {
         display: flex;
-        justify-content: space-between;
+        flex-direction: row-reverse;
+        justify-content: flex-end;
         align-items: center;
         padding: 0 2rem 0.5rem 0;
 
@@ -40,8 +42,15 @@
         }
 
         .info__icon {
-          font-size: 5rem;
+          font-size: 3rem;
+          margin-right: 2rem;
           color: $color-mixedGray;
+          &.fa-triangle-exclamation {
+            color: $color-triangleInfo;
+          }
+          &.fa-circle-info {
+            color: $color-circleInfo;
+          }
         }
       }
 
@@ -58,7 +67,7 @@
 
       .article__text {
         font-size: 1.6rem;
-        margin-bottom: 0.4rem;
+        margin-bottom: 1.4rem;
       }
 
       .article__more {
@@ -68,7 +77,13 @@
         font-size: 1.6rem;
         font-weight: bold;
         color: $color-secondary;
-        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        transition: .2s ease-in;
+        position: absolute;
+        bottom: 2%;
+        right: 3%;
         &:hover {
           color: $color-black;
         }
