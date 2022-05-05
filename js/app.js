@@ -94,7 +94,7 @@ function generateNews(news) {
     document.querySelector(".news__section").innerHTML = newsHTML;
 }
 
-//-----------------   close read-more popup   ---------------------------------------
+//-----------------   close read-more popup, show full size clicked news  ---------------------------------------
 const $newsModal = document.querySelector(".news__modal");
 const $modalArticle = document.querySelector(".modal__article");
 const $modalDate = $modalArticle.children[0].children[0];
@@ -107,7 +107,6 @@ document.querySelector(".exit-icon").addEventListener("click", () => {
     $newsModal.classList.add("isHidden");
 });
 
-//----------------  show full size clicked news -----------------------------------
 function getFullSizeNews(news) {
     const $readMoreBtns = document.querySelectorAll(".article__more");
 
@@ -117,14 +116,19 @@ function getFullSizeNews(news) {
 
             news.forEach((item) => {
                 if (item.id === currentArticleID) {
-                    console.log("to samo")
+                    $modalDate.textContent = item.date.slice(5, 11).split('.').reverse().join('.');
+                    $modalTitle.textContent = item.title;
+                    $modalName.textContent = item.name;
+                    $modalText.textContent = item.newsContent;
+                    $newsModal.classList.remove("isHidden");
+                    $newsModal.classList.add("isActive");
                 }
             })
         })
     })
 }
 
-//---------------------------------------------------------------------------------------------
+//-----------------------  if user is on mobile don't show google maps by default    ------------------------------------------------------------
 const $googleMap = document.querySelector(".contact__map");
 const $contactDetailsBox = document.querySelector(".contact__details");
 const $divToClone = document.querySelector(".details__item");
