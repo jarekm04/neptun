@@ -166,10 +166,12 @@ function generateImportantNews(importantNews) {
         const itemTime = new Date(item.popoverTime.split('.').reverse().join('.')).getTime();
 
         if (currentTime >= itemTime) {
-            console.log("za późno na news")
+            console.log("za późno na news");
         } else {
             const newImportantNewsSection = document.createElement("section");
             newImportantNewsSection.classList.add("importantNews");
+            newImportantNewsSection.dataset.id = item.id;
+            checkLocalStorage(newImportantNewsSection);
             newImportantNewsSection.innerHTML = `
                 <article class="importantNews__popup">
                     <i class="fa-solid fa-circle-xmark exit-icon"></i>
@@ -193,14 +195,14 @@ function generateImportantNews(importantNews) {
     const $importantNewsCheckbox = document.querySelector(".inputBox__input");
 
     $importantNewsCloseBtn.addEventListener("click", () => {
+        if ($importantNewsCheckbox.checked) {
+            localStorage.setItem($importantNewsSection.dataset.id, $importantNewsSection.dataset.id);
+        }
+
         $importantNewsSection.style.display = "none";
     })
 }
 
-
-
-// $importantNewsCheckbox.addEventListener("change", (e) => {
-//     if (e.target.checked) {
-//
-//     }
-// })
+function checkLocalStorage(section) {
+    section.dataset.id === localStorage.getItem(section.dataset.id) ? section.style.display = "none" : null;
+}
