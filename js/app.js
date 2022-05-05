@@ -45,13 +45,16 @@ const colRef = collection(db, "News");
 getDocs(colRef)
     .then((snapshot) => {
         let news = [];
+        let importantNews = [];
         snapshot.docs.forEach((doc) => {
-            news.push({ ...doc.data(), id: doc.id })
+            news.push({ ...doc.data(), id: doc.id });
         })
+        importantNews = news.filter((item) => item.isPopover === "yes");
         news = news.filter((item) => item.isPopover === "no");
         news.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
         generateNews(news);
         getFullSizeNews(news);
+        generateImportantNews(importantNews);
     })
     .catch(err => {
         console.log(err.message);
@@ -154,3 +157,50 @@ if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 }
 
 // --------- important news Popup ------------------------------------
+const $importantNewsContainer = document.querySelector(".importantNews-container");
+
+function generateImportantNews(importantNews) {
+    const currentTime = new Date().getTime();
+
+    importantNews.forEach((item) => {
+        const itemTime = new Date(item.popoverTime.split('.').reverse().join('.')).getTime();
+
+        if (currentTime >= itemTime) {
+            console.log("za późno na news")
+        } else {
+            const newImportantNewsSection = document.createElement("section");
+            newImportantNewsSection.classList.add("importantNews");
+            newImportantNewsSection.innerHTML = `
+                <article class="importantNews__popup">
+                    <i class="fa-solid fa-circle-xmark exit-icon"></i>
+                    <div class="popup__headline">
+                        <h3 class="headline__title">${item.title}</h3>
+                        <p class="headline__author">przez ${item.name}</p>
+                        <div class="headline__inputBox">
+                            <label for="dontShow" class="inputBox__label">Nie pokazuj więcej tego newsa</label>
+                            <input type="checkbox" id="dontShow" class="inputBox__input">
+                        </div>
+                    </div>
+                    <p class="popup__text">${item.newsContent}</p>
+                </article>
+            `;
+            $importantNewsContainer.appendChild(newImportantNewsSection);
+        }
+    })
+
+    const $importantNewsSection = document.querySelector(".importantNews");
+    const $importantNewsCloseBtn = document.querySelector(".importantNews .exit-icon");
+    const $importantNewsCheckbox = document.querySelector(".inputBox__input");
+
+    $importantNewsCloseBtn.addEventListener("click", () => {
+        $importantNewsSection.style.display = "none";
+    })
+}
+
+
+
+// $importantNewsCheckbox.addEventListener("change", (e) => {
+//     if (e.target.checked) {
+//
+//     }
+// })
