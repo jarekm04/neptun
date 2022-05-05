@@ -28,6 +28,10 @@
       color: $color-arrowHover;
       cursor: pointer;
       z-index: 102;
+      transition: .2s ease-in;
+      &:hover {
+        color: $color-darkGray;
+      }
     }
 
     .popup__headline {
@@ -70,6 +74,9 @@
 
           &:checked {
             background: $color-arrowHover;
+            &:after {
+              left: calc(100% - 1.5em);
+            }
           }
 
           &:after {
@@ -83,10 +90,6 @@
             transform: scale(.7);
             left: 0;
             transition: all .2s ease-in-out;
-
-            &:checked {
-              left: calc(100% - 1.5em);
-            }
           }
         }
       }
