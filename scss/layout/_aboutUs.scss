@@ -5,6 +5,7 @@
   background-position: center;
   background-attachment: fixed;
   scroll-margin-top: $nav-offset-top;
+  overflow-x: clip;
   @include mobile {
     height: 90vh;
   }

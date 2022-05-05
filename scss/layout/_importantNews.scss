@@ -1,0 +1,100 @@
+.importantNews {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 101;
+
+  .importantNews__popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    color: $color-black;
+    background-color: $color-lightGray;
+    border-radius: 1rem;
+    @include mobile {
+      width: 30rem;
+    }
+
+    .exit-icon {
+      position: absolute;
+      top: -3%;
+      right: -1%;
+      font-size: 4rem;
+      color: $color-arrowHover;
+      cursor: pointer;
+      z-index: 102;
+    }
+
+    .popup__headline {
+      padding: 2rem;
+      border-bottom: 0.1rem solid $color-mediumGray;
+      position: relative;
+
+      .headline__title {
+        font-size: 2.5rem;
+      }
+
+      .headline__author {
+        font-size: 1rem;
+      }
+
+      .headline__inputBox {
+        position: absolute;
+        bottom: 6%;
+        right: 4%;
+        display: flex;
+        align-items: center;
+
+        .inputBox__label {
+          margin-right: 0.5rem;
+        }
+
+        .inputBox__input {
+          font-size: 1.2rem;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          width: 3.5em;
+          height: 1.5em;
+          background: $color-black;
+          border-radius: 3em;
+          position: relative;
+          cursor: pointer;
+          outline: none;
+          transition: all .2s ease-in-out;
+
+          &:checked {
+            background: $color-arrowHover;
+          }
+
+          &:after {
+            position: absolute;
+            content: "";
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 50%;
+            background: #fff;
+            box-shadow: 0 0 .25em rgba(0,0,0,.3);
+            transform: scale(.7);
+            left: 0;
+            transition: all .2s ease-in-out;
+
+            &:checked {
+              left: calc(100% - 1.5em);
+            }
+          }
+        }
+      }
+    }
+
+    .popup__text {
+      font-size: 1.6rem;
+      padding: 2rem;
+    }
+  }
+}

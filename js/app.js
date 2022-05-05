@@ -152,3 +152,5 @@ if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navig
 } else {
     $googleMap.style.display = "block";
 }
+
+// --------- important news Popup ------------------------------------

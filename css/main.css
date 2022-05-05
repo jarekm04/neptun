@@ -390,6 +390,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   scroll-margin-top: 99px;
+  overflow-x: clip;
 }
 @media screen and (max-width: 600px) {
   .aboutUs {
@@ -905,6 +906,97 @@ body {
   .contact .container .contact__map iframe {
     width: 100%;
   }
+}
+
+.importantNews {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 101;
+}
+.importantNews .importantNews__popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  color: #000;
+  background-color: #e3e3e3;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 600px) {
+  .importantNews .importantNews__popup {
+    width: 30rem;
+  }
+}
+.importantNews .importantNews__popup .exit-icon {
+  position: absolute;
+  top: -3%;
+  right: -1%;
+  font-size: 4rem;
+  color: #007aff;
+  cursor: pointer;
+  z-index: 102;
+}
+.importantNews .importantNews__popup .popup__headline {
+  padding: 2rem;
+  border-bottom: 0.1rem solid #666666;
+  position: relative;
+}
+.importantNews .importantNews__popup .popup__headline .headline__title {
+  font-size: 2.5rem;
+}
+.importantNews .importantNews__popup .popup__headline .headline__author {
+  font-size: 1rem;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox {
+  position: absolute;
+  bottom: 6%;
+  right: 4%;
+  display: flex;
+  align-items: center;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox .inputBox__label {
+  margin-right: 0.5rem;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox .inputBox__input {
+  font-size: 1.2rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 3.5em;
+  height: 1.5em;
+  background: #000;
+  border-radius: 3em;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox .inputBox__input:checked {
+  background: #007aff;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox .inputBox__input:after {
+  position: absolute;
+  content: "";
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0.25em rgba(0, 0, 0, 0.3);
+  transform: scale(0.7);
+  left: 0;
+  transition: all 0.2s ease-in-out;
+}
+.importantNews .importantNews__popup .popup__headline .headline__inputBox .inputBox__input:after:checked {
+  left: calc(100% - 1.5em);
+}
+.importantNews .importantNews__popup .popup__text {
+  font-size: 1.6rem;
+  padding: 2rem;
 }
 
 .theory-content {
