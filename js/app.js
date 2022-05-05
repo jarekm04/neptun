@@ -1,8 +1,8 @@
 //--------------------------AOS fade in sections--------------------------------------------
 AOS.init();
 
-import { db } from "../firebase.js";
-import { doc, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+import {db} from "../firebase.js";
+import {doc, collection, getDocs} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 //--------------------------------------mobile hamburger menu-------------------------------------
 const hamburgerIcon = document.querySelector(".hamburger");
@@ -12,7 +12,7 @@ hamburgerIcon.addEventListener("click", () => {
     menuList.classList.toggle("active");
     menuList.classList.contains("active") ? hamburgerIcon.textContent = "cancel" : hamburgerIcon.textContent = "menu";
 });
-document.querySelectorAll(".menu__item").forEach( item => item.addEventListener("click", () => {
+document.querySelectorAll(".menu__item").forEach(item => item.addEventListener("click", () => {
     menuList.classList.remove("active");
     menuList.classList.contains("active") ? hamburgerIcon.textContent = "cancel" : hamburgerIcon.textContent = "menu";
 }))
@@ -47,7 +47,7 @@ getDocs(colRef)
         let news = [];
         let importantNews = [];
         snapshot.docs.forEach((doc) => {
-            news.push({ ...doc.data(), id: doc.id });
+            news.push({...doc.data(), id: doc.id});
         })
         importantNews = news.filter((item) => item.isPopover === "yes");
         news = news.filter((item) => item.isPopover === "no");
@@ -135,7 +135,7 @@ function getFullSizeNews(news) {
 const $googleMap = document.querySelector(".contact__map");
 const $contactDetailsBox = document.querySelector(".contact__details");
 const $divToClone = document.querySelector(".details__item");
-if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
     $googleMap.style.display = "none";
 
     const clone = $divToClone.cloneNode(true);

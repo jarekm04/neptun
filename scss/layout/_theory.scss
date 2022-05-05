@@ -32,7 +32,8 @@
         align-items: center;
         width: 32rem;
         height: 100%;
-        background: $color-mediumGray;
+        background: $color-white;
+        color: $color-black;
         @media (max-width: 400px) {
           width: 28rem;
         }

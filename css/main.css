@@ -626,7 +626,8 @@ body {
   align-items: center;
   width: 32rem;
   height: 100%;
-  background: #666666;
+  background: #fff;
+  color: #000;
 }
 @media (max-width: 400px) {
   .theory .swiper .swiper-slide .theory__item {
