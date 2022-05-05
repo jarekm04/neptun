@@ -109,6 +109,10 @@ document.querySelector(".exit-icon").addEventListener("click", () => {
     $newsModal.classList.remove("isActive");
     $newsModal.classList.add("isHidden");
 });
+$newsModal.addEventListener("click", () => {
+    $newsModal.classList.remove("isActive");
+    $newsModal.classList.add("isHidden");
+});
 
 function getFullSizeNews(news) {
     const $readMoreBtns = document.querySelectorAll(".article__more");
