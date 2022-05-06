@@ -270,13 +270,15 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
+  padding: 1rem;
   background-color: #2b5379;
   color: #fff;
-  align-self: flex-start;
+  align-self: center;
 }
 .news .news__section .section__article .article__info .info__icon {
   font-size: 3rem;
   margin-right: 2rem;
+  padding: 1rem;
   color: #222831;
 }
 .news .news__section .section__article .article__info .info__icon.fa-triangle-exclamation {
@@ -699,18 +701,24 @@ body {
   top: 35%;
   right: auto;
   transition: 0.2s ease-in-out;
+  color: #000;
+  opacity: 0.6;
 }
 .theory .swiper .swiper-button-prev:hover {
   color: #007aff;
+  opacity: 1;
 }
 .theory .swiper .swiper-button-next {
   right: 10%;
   top: 35%;
   left: auto;
   transition: 0.2s ease-in-out;
+  color: #000;
+  opacity: 0.6;
 }
 .theory .swiper .swiper-button-next:hover {
   color: #007aff;
+  opacity: 1;
 }
 
 .schedule {
@@ -1044,6 +1052,7 @@ body {
   font-size: 1.6rem;
   line-height: 2.5rem;
   padding-bottom: 1rem;
+  margin: 0 4rem;
 }
 @media screen and (max-width: 1000px) {
   .theory-content .content__box .box__text {

@@ -80,9 +80,12 @@
       top: 35%;
       right: auto;
       transition: .2s ease-in-out;
+      color: $color-black;
+      opacity: 0.6;
 
       &:hover {
         color: $color-arrowHover;
+        opacity: 1;
       }
     }
 
@@ -91,9 +94,12 @@
       top: 35%;
       left: auto;
       transition: .2s ease-in-out;
+      color: $color-black;
+      opacity: 0.6;
 
       &:hover {
         color: $color-arrowHover;
+        opacity: 1;
       }
     }
   }

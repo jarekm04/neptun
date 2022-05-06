@@ -36,14 +36,16 @@
           justify-content: center;
           align-items: center;
           font-size: 1.2rem;
+          padding: 1rem;
           background-color: $color-secondary;
           color: $color-white;
-          align-self: flex-start;
+          align-self: center;
         }
 
         .info__icon {
           font-size: 3rem;
           margin-right: 2rem;
+          padding: 1rem;
           color: $color-mixedGray;
           &.fa-triangle-exclamation {
             color: $color-triangleInfo;
