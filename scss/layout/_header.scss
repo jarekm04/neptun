@@ -44,6 +44,9 @@
 
       li {
         list-style-type: none;
+        @include tablet {
+          width: 100%;
+        }
 
         a {
           display: flex;

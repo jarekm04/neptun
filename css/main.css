@@ -71,6 +71,11 @@ body {
 .header .header-box .header__menu li {
   list-style-type: none;
 }
+@media screen and (max-width: 1000px) {
+  .header .header-box .header__menu li {
+    width: 100%;
+  }
+}
 .header .header-box .header__menu li a {
   display: flex;
   align-items: center;
@@ -1018,46 +1023,41 @@ body {
   padding: 0 4rem;
   margin: 10rem 0 5rem 0;
 }
-.theory-content .content__title {
+.theory-content .container .content__title {
   font-size: 3rem;
   text-align: center;
   padding: 1rem 0;
   letter-spacing: 0.1rem;
 }
-.theory-content .content__box {
-  -moz-column-count: 2;
-       column-count: 2;
-  -moz-column-gap: 4rem;
-       column-gap: 4rem;
+.theory-content .container .content__box {
+  display: flex;
+  flex-wrap: wrap;
 }
-@media screen and (max-width: 1000px) {
-  .theory-content .content__box {
-    -moz-column-count: auto;
-         column-count: auto;
-  }
-}
-.theory-content .content__box .box__headline {
+.theory-content .container .content__box .box__headline {
   font-size: 2rem;
   line-height: 3.5rem;
-  margin-bottom: 1rem;
   padding-left: 1rem;
 }
 @media screen and (max-width: 1000px) {
-  .theory-content .content__box .box__headline {
+  .theory-content .container .content__box .box__headline {
     font-size: 1.8rem;
     line-height: 3rem;
   }
 }
-.theory-content .content__box .box__text {
+.theory-content .container .content__box .box__text {
   font-size: 1.6rem;
   line-height: 2.5rem;
-  padding-bottom: 1rem;
-  margin: 0 4rem;
 }
 @media screen and (max-width: 1000px) {
-  .theory-content .content__box .box__text {
+  .theory-content .container .content__box .box__text {
     font-size: 1.5rem;
     line-height: 2.2rem;
   }
+}
+
+.box {
+  width: 50%;
+  margin-bottom: 2.5rem;
+  padding-right: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
