@@ -210,3 +210,8 @@ function generateImportantNews(importantNews) {
 function checkLocalStorage(section) {
     section.dataset.id === localStorage.getItem(section.dataset.id) ? section.style.display = "none" : null;
 }
+
+//-------------- smooth scroll cannot be instant because I need auto scroll to theory section-----------------------
+setTimeout(() => {
+    document.querySelector("html").style.scrollBehavior = "smooth";
+}, 1000);
