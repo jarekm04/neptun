@@ -56,14 +56,6 @@
           }
         }
 
-        .item__text {
-          font-size: 2rem;
-          text-align: center;
-          @media (max-width: 400px) {
-            font-size: 1.6rem;
-          }
-        }
-
         .item__anchor {
           @include buttonStyle;
           @media (max-width: 400px) {
@@ -82,10 +74,13 @@
       transition: .2s ease-in-out;
       color: $color-black;
       opacity: 0.6;
+      padding: 3rem;
+      background: $color-swiperBtnBg;
+      border-radius: 50%;
 
       &:hover {
         color: $color-arrowHover;
-        opacity: 1;
+        opacity: 0.9;
       }
     }
 
@@ -96,10 +91,13 @@
       transition: .2s ease-in-out;
       color: $color-black;
       opacity: 0.6;
+      padding: 3rem;
+      background: $color-swiperBtnBg;
+      border-radius: 50%;
 
       &:hover {
         color: $color-arrowHover;
-        opacity: 1;
+        opacity: 0.9;
       }
     }
   }

@@ -257,7 +257,7 @@ body {
 }
 .news .news__section .section__article {
   width: 35rem;
-  padding: 1rem 0.8rem;
+  padding: 1rem 0.8rem 2rem 0.8rem;
   background-color: #fff;
   position: relative;
 }
@@ -661,15 +661,6 @@ body {
     height: 8rem;
   }
 }
-.theory .swiper .swiper-slide .theory__item .item__text {
-  font-size: 2rem;
-  text-align: center;
-}
-@media (max-width: 400px) {
-  .theory .swiper .swiper-slide .theory__item .item__text {
-    font-size: 1.6rem;
-  }
-}
 .theory .swiper .swiper-slide .theory__item .item__anchor {
   display: inline-flex;
   justify-content: center;
@@ -708,10 +699,13 @@ body {
   transition: 0.2s ease-in-out;
   color: #000;
   opacity: 0.6;
+  padding: 3rem;
+  background: #aaa;
+  border-radius: 50%;
 }
 .theory .swiper .swiper-button-prev:hover {
   color: #007aff;
-  opacity: 1;
+  opacity: 0.9;
 }
 .theory .swiper .swiper-button-next {
   right: 10%;
@@ -720,10 +714,13 @@ body {
   transition: 0.2s ease-in-out;
   color: #000;
   opacity: 0.6;
+  padding: 3rem;
+  background: #aaa;
+  border-radius: 50%;
 }
 .theory .swiper .swiper-button-next:hover {
   color: #007aff;
-  opacity: 1;
+  opacity: 0.9;
 }
 
 .schedule {
@@ -1032,32 +1029,45 @@ body {
 .theory-content .container .content__box {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 12rem;
 }
-.theory-content .container .content__box .box__headline {
+@media screen and (max-width: 1000px) {
+  .theory-content .container .content__box {
+    flex-direction: column;
+  }
+}
+.theory-content .container .content__box .box {
+  width: 50%;
+  margin-bottom: 2.5rem;
+  padding-right: 2rem;
+}
+@media screen and (max-width: 1000px) {
+  .theory-content .container .content__box .box {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 0;
+  }
+}
+.theory-content .container .content__box .box .box__headline {
   font-size: 2rem;
   line-height: 3.5rem;
   padding-left: 1rem;
 }
 @media screen and (max-width: 1000px) {
-  .theory-content .container .content__box .box__headline {
+  .theory-content .container .content__box .box .box__headline {
     font-size: 1.8rem;
     line-height: 3rem;
   }
 }
-.theory-content .container .content__box .box__text {
+.theory-content .container .content__box .box .box__text {
   font-size: 1.6rem;
   line-height: 2.5rem;
 }
 @media screen and (max-width: 1000px) {
-  .theory-content .container .content__box .box__text {
+  .theory-content .container .content__box .box .box__text {
     font-size: 1.5rem;
     line-height: 2.2rem;
+    margin-bottom: 0.7rem;
   }
-}
-
-.box {
-  width: 50%;
-  margin-bottom: 2.5rem;
-  padding-right: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
