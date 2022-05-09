@@ -94,6 +94,11 @@
             }
           }
         }
+        &:first-of-type {
+          .column__square {
+            background-color: $color-mixedGray;
+          }
+        }
       }
     }
   }

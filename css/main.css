@@ -27,7 +27,7 @@ body {
   width: 100%;
   height: 10rem;
   background-color: #000;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 100;
 }
 .header .header-box {
@@ -36,6 +36,7 @@ body {
   align-items: center;
   height: 10rem;
   padding: 0 2rem;
+  opacity: 0.9;
 }
 .header .header-box .header__logo {
   font-size: 3.5rem;
@@ -821,6 +822,9 @@ body {
 .schedule .schedule__content .content__table .table__column .column__square .square__group {
     font-size: 1.6rem;
   }
+}
+.schedule .schedule__content .content__table .table__column:first-of-type .column__square {
+  background-color: #222831;
 }
 
 .contact {
