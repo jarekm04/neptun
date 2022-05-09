@@ -95,6 +95,7 @@
           }
         }
         &:first-of-type {
+          justify-content: space-between;
           .column__square {
             background-color: $color-mixedGray;
           }

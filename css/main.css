@@ -823,6 +823,9 @@ body {
     font-size: 1.6rem;
   }
 }
+.schedule .schedule__content .content__table .table__column:first-of-type {
+  justify-content: space-between;
+}
 .schedule .schedule__content .content__table .table__column:first-of-type .column__square {
   background-color: #222831;
 }
