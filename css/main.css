@@ -243,6 +243,9 @@ body {
   background-color: #e3e3e3;
   color: #000;
   scroll-margin-top: 99px;
+  position: relative;
+  min-height: 36rem;
+  overflow: hidden;
 }
 .news .news__title {
   font-size: 3rem;

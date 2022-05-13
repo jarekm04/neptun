@@ -3,6 +3,9 @@
   background-color: $color-lightGray;
   color: $color-black;
   scroll-margin-top: $nav-offset-top;
+  position: relative;
+  min-height: 36rem;
+  overflow: hidden;
 
   .news__title {
     font-size: 3rem;
