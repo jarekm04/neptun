@@ -39,14 +39,38 @@ body {
   opacity: 0.9;
 }
 .header .header-box .header__logo {
-  font-size: 3.5rem;
-  font-weight: bold;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 25rem;
+  height: 100%;
   text-decoration: none;
 }
 @media screen and (max-width: 600px) {
   .header .header-box .header__logo {
-    font-size: 2.5rem;
+    max-width: 200px;
+  }
+}
+.header .header-box .header__logo p {
+  font-size: 1.7rem;
+  color: #fff;
+  letter-spacing: 0.5rem;
+}
+@media screen and (max-width: 600px) {
+  .header .header-box .header__logo p {
+    font-size: 1.4rem;
+    letter-spacing: 0.2rem;
+  }
+}
+.header .header-box .header__logo img {
+  height: 45%;
+  margin-right: 0.6rem;
+}
+@media screen and (max-width: 600px) {
+  .header .header-box .header__logo img {
+    height: 30%;
+    margin-right: 0.4rem;
   }
 }
 .header .header-box .header__menu {
