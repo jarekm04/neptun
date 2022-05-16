@@ -72,7 +72,7 @@
           width: 100%;
         }
 
-        a {
+        .menu__item {
           display: flex;
           align-items: center;
           height: 10rem;
@@ -82,6 +82,7 @@
           color: $color-white;
           text-decoration: none;
           letter-spacing: 0.3rem;
+          text-align: center;
           @include tablet {
             justify-content: center;
             height: 5rem;

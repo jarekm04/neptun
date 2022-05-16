@@ -100,7 +100,7 @@ body {
     width: 100%;
   }
 }
-.header .header-box .header__menu li a {
+.header .header-box .header__menu li .menu__item {
   display: flex;
   align-items: center;
   height: 10rem;
@@ -110,15 +110,16 @@ body {
   color: #fff;
   text-decoration: none;
   letter-spacing: 0.3rem;
+  text-align: center;
 }
 @media screen and (max-width: 1000px) {
-  .header .header-box .header__menu li a {
+  .header .header-box .header__menu li .menu__item {
     justify-content: center;
     height: 5rem;
     margin: 0;
   }
 }
-.header .header-box .header__menu li a:after, .header .header-box .header__menu li a:before {
+.header .header-box .header__menu li .menu__item:after, .header .header-box .header__menu li .menu__item:before {
   content: "";
   position: absolute;
   width: 0;
@@ -126,43 +127,43 @@ body {
   transition: all 0.3s ease-in;
   margin-top: 0.2rem;
 }
-.header .header-box .header__menu li a:after {
+.header .header-box .header__menu li .menu__item:after {
   bottom: 25%;
   left: 0;
 }
 @media screen and (max-width: 1000px) {
-  .header .header-box .header__menu li a:after {
+  .header .header-box .header__menu li .menu__item:after {
     bottom: 10%;
   }
 }
-.header .header-box .header__menu li a:before {
+.header .header-box .header__menu li .menu__item:before {
   top: 25%;
   right: 0;
 }
 @media screen and (max-width: 1000px) {
-  .header .header-box .header__menu li a:before {
+  .header .header-box .header__menu li .menu__item:before {
     top: 10%;
   }
 }
-.header .header-box .header__menu li a:hover:after {
+.header .header-box .header__menu li .menu__item:hover:after {
   width: 100%;
   height: 0.2rem;
   bottom: 25%;
   background: #fff;
 }
 @media screen and (max-width: 1000px) {
-  .header .header-box .header__menu li a:hover:after {
+  .header .header-box .header__menu li .menu__item:hover:after {
     bottom: 10%;
   }
 }
-.header .header-box .header__menu li a:hover:before {
+.header .header-box .header__menu li .menu__item:hover:before {
   width: 100%;
   height: 0.2rem;
   top: 25%;
   background: #fff;
 }
 @media screen and (max-width: 1000px) {
-  .header .header-box .header__menu li a:hover:before {
+  .header .header-box .header__menu li .menu__item:hover:before {
     top: 10%;
   }
 }
