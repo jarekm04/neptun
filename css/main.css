@@ -270,9 +270,7 @@ body {
   padding: 5rem 2rem;
   color: #000;
   scroll-margin-top: 99px;
-  background-image: url("../assets/rasz_L_przod2021.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: #e3e3e3;
 }
 .news .news__title {
   font-size: 3rem;
@@ -763,9 +761,7 @@ body {
   color: #000;
   padding: 3rem 2rem 5rem 2rem;
   scroll-margin-top: 99px;
-  background-image: url("../assets/rasz_L_tyl2021.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: #e3e3e3;
 }
 .schedule .schedule__content {
   display: flex;

@@ -5,9 +5,10 @@
   padding: 5rem 2rem;
   color: $color-black;
   scroll-margin-top: $nav-offset-top;
-  background-image: url("../assets/rasz_L_przod2021.jpg");
-  background-size: cover;
-  background-position: center;
+  background-color: $color-lightGray;
+  //background-image: url("../assets/rasz_L_przod2021.jpg");
+  //background-size: cover;
+  //background-position: center;
 
   .news__title {
     font-size: 3rem;
