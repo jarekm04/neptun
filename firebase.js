@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase
 import { getFirestore } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyD57CPZdMBLyK-X3up3kW6Qn2GQ8aovnxI",
+    apiKey: "YOUR-API-KEY",
     authDomain: "neptun-501aa.firebaseapp.com",
     projectId: "neptun-501aa",
     storageBucket: "neptun-501aa.appspot.com",
